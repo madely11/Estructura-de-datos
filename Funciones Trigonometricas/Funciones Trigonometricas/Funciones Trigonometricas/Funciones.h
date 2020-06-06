@@ -24,7 +24,7 @@ public:
 	float miCoseno(float);
 	int factorial(int);
 	float potencia(float, int);
-
+	float miTangente(float);
 };
 float Funciones::potencia(float num_base, int exp) {
 	if (exp < 0) {
@@ -96,4 +96,14 @@ float Funciones::miCoseno(float angulo) {
 		//cout << coseno << endl;
 	}
 	return coseno;
+}
+
+float Funciones::miTangente(float angulo) {
+	if (((int)angulo % 90) == 0) {
+		cout << "Error:para la tangente el angulo no debe ser multiplo de 90" << endl;
+		return 0;
+	}
+	else {
+		return (miSeno(angulo) / miCoseno(angulo));
+	}
 }
