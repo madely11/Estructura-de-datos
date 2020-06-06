@@ -32,7 +32,8 @@ int main()
 	temporal = (float)temporal;
 	printf("\nEl seno es: %f ", funcion.miSeno(temporal));
 	printf("\nEl coseno es: %f\n", funcion.miCoseno(temporal));
-	printf("\nLa tangente es: %f\n", funcion.miTangente(temporal));
+	if(funcion.miTangente(temporal) != 0)
+		printf("\nLa tangente es: %f\n", funcion.miTangente(temporal));
 	system("pause");
 	return 0;
 }
