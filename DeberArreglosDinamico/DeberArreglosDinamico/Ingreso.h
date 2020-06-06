@@ -21,14 +21,11 @@ public:
 	string leer(string, int);
 };
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Ingreso::leer(string mensage, int tipo) */
-/** Purpose:    Funcion para leer valor y enviarlo a validar*/
-/** Parameters:*/
-/** + mensage*/
-/** + tipo*/
-/** Return:     string*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion ingresar llamada desde el Aplicativo
+	@param primeor un strinng que es el mensaje que se despliega, segundo un entero 
+	@returns entrada que es el valor validado
+*/
 
 string Ingreso::leer(string mensage, int tipo) {
 	Validacion validacion;

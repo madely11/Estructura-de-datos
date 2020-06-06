@@ -7,7 +7,7 @@
 * MATERIA: Estructura de Datos                                    *
 * NRC: 6396														  *
 * FECHA DE CREACIÓN: 01/06/20									  *
-* FECHA DE MODIFICACIÓN: 03/06/20								  *
+* FECHA DE MODIFICACIÓN: 06/06/20								  *
 ******************************************************************/
 
 /**
@@ -33,7 +33,7 @@ private:
 };
 
 /**
-	@brief Funcion calcular MCM calcula el MCM de un arreglo
+	@brief Funcion calcular MCM de un arreglo
 	@param arreglo guarda numeros de un arreglo ingresado, longitud dato que guarda la longitud del arreglo
 	@returns a que representa el valor dell MCM
 */
@@ -56,14 +56,11 @@ int Operaciones::calcularMCM(int* arreglo, int longitud)
 	return a;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Operaciones::calcularMCD(int* arreglo, int longitud)*/
-/** Purpose:    Asignar valores y llamar a una funcion llamada MCD*/
-/** Parameters:*/
-/** - arreglo*/
-/** - longitud*/
-/** Return:     int*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion calcular MCD de un arreglo
+	@param arreglo guarda numeros de un arreglo ingresado, longitud dato que guarda la longitud del arreglo
+	@returns a que representa el valor dell MCD
+*/
 
 int Operaciones::calcularMCD(int* arreglo, int longitud)
 {
@@ -82,15 +79,12 @@ int Operaciones::calcularMCD(int* arreglo, int longitud)
 	return a;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Operaciones::MCD(int a, int b)*/
-/** Purpose:    Calcular de MCD entre dos numeros con el algoritmo */
-/**             de Euclides.*/
-/** Parameters:*/
-/** - a*/
-/** - b*/
-/** Return:     int*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion calcular MCM entre dos numeros
+	@param entero a que representa el primer numero, entero b que es el segundo numero, estos 
+	numeros son tomaods del arreglo.
+	@returns a que representa el valor dell MCD entre estos dos numeros
+*/
 
 int Operaciones::MCD(int a, int b)
 {

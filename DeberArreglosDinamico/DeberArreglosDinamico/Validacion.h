@@ -24,14 +24,11 @@ public:
 
 
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Validacion::validar(string entrada, int tipo)*/
-/** Purpose:    Definir como entero (1), flotante (2)*/
-/** Parameters:*/
-/** + entrada*/
-/** = tipo*/
-/** Return:     bool*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion validar
+	@param strign entrada que representa el mensaje, un int de tipo para la validacion
+	@returns un booleano
+*/
 
 bool Validacion::validar(string entrada, int tipo) {
 	int contador = 0;

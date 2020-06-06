@@ -25,6 +25,10 @@
 #include "Ingreso.h"
 
 using namespace std;
+/**
+	@brief Funcion main donde se hace la llamada a las librerias por medio de los objetos
+	@returns 0 para que finalize el programa
+*/
 
 int main() {
 	Arreglo arr1;

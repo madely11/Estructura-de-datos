@@ -36,37 +36,31 @@ private:
 };
 
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::getArreglo()*/
-/** Purpose:    Getter de arreglo*/
-/** Return:     int**/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion get del Arreglo
+	@param void
+	@returns arreglo
+*/
 
 int* Arreglo::getArreglo(void)
 {
 	return arreglo;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::setArreglo(int* newArreglo)*/
-/** Purpose:    Setter de arreglo*/
-/** Parameters:*/
-/** - newArreglo*/
-/** Return:     void*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion ser de arreglo
+	@param entero puntero arreglo
+	@returns arreglo que contiene el nuevo arreglo
+*/
 
 void Arreglo::setArreglo(int* newArreglo)
 {
 	arreglo = newArreglo;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::encerar(int arreglo)*/
-/** Purpose:    Llenar con 0 cad aposicion del arreglo*/
-/** Parameters:*/
-/** - arreglo*/
-/** Return:     void*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion encerar
+*/
 
 void Arreglo::encerar()
 {
@@ -77,14 +71,10 @@ void Arreglo::encerar()
 	
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::ingresar(int arreglo)*/
-/** Purpose:    Aumentar la longitud cada que ingresa un valor y guardar*/ 
-/**             ese valor en la posicion correspondiente*/
-/** Parameters:*/
-/** - arreglo*/
-/** Return:     void*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion ingresar
+	@param valor que representa la cantidad de memoria sseparada para el arreglo
+*/
 
 void Arreglo::ingresar(int valor)
 {
@@ -93,13 +83,9 @@ void Arreglo::ingresar(int valor)
 	*(arreglo + (longitud-1)) = valor;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::imprimir(int arreglo)*/
-/** Purpose:    Funcion para imprimir*/
-/** Parameters:*/
-/** - arreglo*/
-/** Return:     void*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion imprimir
+*/
 
 void Arreglo::imprimir()
 {
@@ -111,35 +97,29 @@ void Arreglo::imprimir()
 }
 
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::getLongitud()*/
-/** Purpose:    Getter de longitud*/
-/** Return:     int*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion get de longitud
+	@returns longitud
+*/
 
 int Arreglo::getLongitud(void)
 {
 	return longitud;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::setLongitud(int newLongitud)*/
-/** Purpose:   Setter de longitud*/
-/** Parameters:*/
-/** - newLongitud*/
-/** Return:     void*/
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion ser para longitud
+	@param entero longitud
+*/
 
 void Arreglo::setLongitud(int newLongitud)
 {
 	longitud = newLongitud;
 }
 
-////////////////////////////////////////////////////////////////////////
-/** Name:       Arreglo::Arreglo()*/
-/** Purpose:    Constrcutor que inicializar longitud y arreglo con malloc.*/
-/** Return:     */
-////////////////////////////////////////////////////////////////////////
+/**
+	@brief Funcion constrcutor de arreglo
+*/
 
 Arreglo::Arreglo()
 {
