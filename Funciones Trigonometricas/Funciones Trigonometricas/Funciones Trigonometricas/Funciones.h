@@ -26,6 +26,7 @@ public:
 	float potencia(float, int);
 	float miTangente(float);
 };
+// Funcio para elevar un numero
 float Funciones::potencia(float num_base, int exp) {
 	if (exp < 0) {
 		exp *= -1;
@@ -39,14 +40,14 @@ float Funciones::potencia(float num_base, int exp) {
 		return num_base * potencia(num_base, exp - 1);
 	}
 }
-
+// Funcion para sacar el factorial de un numero
 int Funciones::factorial(int num) {
 	if (num == 0)
 		return 1;
 	else
 		return num * factorial(num - 1);
 }
-
+// funcion para convertir de grados a radianes 
 float Funciones::convierte(float angulo) {
 	float conversion;
 	if (angulo == 360)
@@ -55,7 +56,7 @@ float Funciones::convierte(float angulo) {
 		conversion = angulo * (float)PI / 180;
 	return conversion;
 }
-
+// Funcion para calcular el seno de un angulo
 float Funciones::miSeno(float angulo) {
 	int gradPol = 7;
 	float seno = 0;
@@ -76,7 +77,7 @@ float Funciones::miSeno(float angulo) {
 	}
 	return seno;
 }
-
+// Funcion para calcular el coseno de un angulo
 float Funciones::miCoseno(float angulo) {
 	int gradPol = 7;
 	float coseno = 0;
@@ -97,7 +98,7 @@ float Funciones::miCoseno(float angulo) {
 	}
 	return coseno;
 }
-
+// Funcion para calcular la tangente de un angulo
 float Funciones::miTangente(float angulo) {
 	if (((int)angulo % 90) == 0) {
 		cout << "Error:para la tangente el angulo no debe ser multiplo de 90" << endl;
