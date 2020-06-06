@@ -1,6 +1,4 @@
 ﻿  Aplicativo.cpp
-C:\Users\Kevin Caicedo\source\repos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones.h(38,29): warning C4244: '=': conversión de 'double' a 'float'; posible pérdida de datos
-C:\Users\Kevin Caicedo\source\repos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones.h(50,19): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
-C:\Users\Kevin Caicedo\source\repos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones.h(52,18): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
-C:\Users\Kevin Caicedo\source\repos\Funciones Trigonometricas\Funciones Trigonometricas\Aplicativo.cpp(14,9): warning C4477: 'printf' : la cadena de formato '%d' requiere un argumento de tipo 'int', pero el argumento variádico 1 tiene el tipo 'double'
-  Funciones Trigonometricas.vcxproj -> C:\Users\Kevin Caicedo\source\repos\Funciones Trigonometricas\Debug\Funciones Trigonometricas.exe
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(39,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(54,13): warning C4101: 'e': unreferenced local variable
+  Funciones Trigonometricas.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Debug\Funciones Trigonometricas.exe
