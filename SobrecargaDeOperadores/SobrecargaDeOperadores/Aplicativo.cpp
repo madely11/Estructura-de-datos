@@ -63,7 +63,7 @@ public:
     Pareja& operator ++();
     bool    operator ==(const Pareja& p) const;
     bool operator > (const Pareja& p) const ;
-
+    bool operator < (const Pareja& p)const;
     // operadores no miembros
     friend ostream& operator << (ostream& o, const Pareja& p);
     friend istream& operator >> (istream& o, const Pareja& p);
@@ -130,7 +130,10 @@ bool Pareja::operator == (const Pareja& p) const
 bool Pareja::operator > (const Pareja& p) const {    // sobrecarga operador >
     return this->a > p.a && this->b > p.b;
 }
-
+// sobrecarga de operados menor que
+bool Pareja::operator < (const Pareja& p) const {
+    return this->a<p.a&& this->b>p.b;
+}
 // implemetaci¢n de operadores no miembros
 ostream& operator << (ostream& o, const Pareja& p)
 {
@@ -181,6 +184,8 @@ int main(int argc, char** argv) {
     cout << "........................." << endl;
     C = A;
     cout << "A > B " << ((A > B) ? "  True \n" : "  False  \n");
+    cout << "........................." << endl;
+    cout << "A < B " << ((A < B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
     C = A = B = ++C;
     cout << "A = " << A << "\n";
