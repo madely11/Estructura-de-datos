@@ -35,6 +35,7 @@ public:
 
 bool Validacion::validar(string entrada, int tipo) {
 	int contador = 0;
+
 	try {
 		for (int i = 0; i < entrada.length(); i++) {
 			if (isalpha(entrada[i])) {
