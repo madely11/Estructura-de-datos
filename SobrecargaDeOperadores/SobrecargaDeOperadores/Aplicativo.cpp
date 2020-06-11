@@ -67,6 +67,7 @@ public:
     bool operator % (const Pareja& p)const;
     bool operator !=  (const Pareja& p)const;
     Pareja& operator --();
+    Pareja& operator %=(const Pareja& p);
     // operadores no miembros
     friend ostream& operator << (ostream& o, const Pareja& p);
     friend istream& operator >> (istream& o, const Pareja& p);
@@ -145,7 +146,7 @@ bool Pareja::operator % (const Pareja& p) const {
     else
         return 0;
 }
-
+// sobrecarga del operador diferente de
 bool Pareja::operator!=(const Pareja& p) const
 {
     return this->a != p.a && this->b != p.b;
@@ -155,6 +156,13 @@ Pareja& Pareja::operator -- ()
 {
     this->a--;
     this->b--;
+    return *this;
+}
+//Sobrecarga del operador %=
+Pareja& Pareja::operator%=(const Pareja& p)
+{
+    this->a %=p.a;
+    this->b %= p.b;
     return *this;
 }
 
@@ -204,6 +212,9 @@ int main(int argc, char** argv) {
     cout << "........................." << endl;*/
     ++C;
     cout << "Mas Mas C = " << C << endl;
+    cout << "........................." << endl;
+    A%=B;
+    cout << "A %=B:" << A << endl;
     cout << "........................." << endl;
     --C;
     cout << "Menos Menos C = " << C << endl;
