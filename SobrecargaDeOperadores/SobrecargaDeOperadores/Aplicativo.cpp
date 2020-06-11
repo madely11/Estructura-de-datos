@@ -66,6 +66,7 @@ public:
     bool operator < (const Pareja& p)const;
     bool operator % (const Pareja& p)const;
     bool operator !=  (const Pareja& p)const;
+    Pareja& operator --();
     // operadores no miembros
     friend ostream& operator << (ostream& o, const Pareja& p);
     friend istream& operator >> (istream& o, const Pareja& p);
@@ -150,6 +151,13 @@ bool Pareja::operator!=(const Pareja& p) const
     return this->a != p.a && this->b != p.b;
 }
 
+Pareja& Pareja::operator -- ()
+{
+    this->a--;
+    this->b--;
+    return *this;
+}
+
 // implemetaci¢n de operadores no miembros
 ostream& operator << (ostream& o, const Pareja& p)
 {
@@ -196,6 +204,10 @@ int main(int argc, char** argv) {
     cout << "........................." << endl;*/
     ++C;
     cout << "Mas Mas C = " << C << endl;
+    cout << "........................." << endl;
+    --C;
+    cout << "Menos Menos C = " << C << endl;
+    cout << "........................." << endl;
     cout << "A == B " << ((A == B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
     C = A;
@@ -211,7 +223,7 @@ int main(int argc, char** argv) {
     C = A = B = ++C;
     cout << "A = " << A << "\n";
     cout << "B = " << B << "\n";
-    cout << "B = " << B << endl;
+    cout << "C = " << C << endl;
     cout << "........................." << endl;
     return 0;
 }
