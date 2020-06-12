@@ -66,6 +66,7 @@ public:
     bool operator < (const Pareja& p)const;
     bool operator % (const Pareja& p)const;
     bool operator !=  (const Pareja& p)const;
+    bool operator >=  (const Pareja& p)const;
     Pareja& operator --();
     Pareja& operator %=(const Pareja& p);
     // operadores no miembros
@@ -151,6 +152,11 @@ bool Pareja::operator!=(const Pareja& p) const
 {
     return this->a != p.a && this->b != p.b;
 }
+//Sobrecarga del operador mayor o igual que
+bool Pareja::operator>=(const Pareja& p) const
+{
+    return this->a >= p.a && this->b >=p.b;
+}
 
 Pareja& Pareja::operator -- ()
 {
@@ -213,9 +219,6 @@ int main(int argc, char** argv) {
     ++C;
     cout << "Mas Mas C = " << C << endl;
     cout << "........................." << endl;
-    A%=B;
-    cout << "A %=B:" << A << endl;
-    cout << "........................." << endl;
     --C;
     cout << "Menos Menos C = " << C << endl;
     cout << "........................." << endl;
@@ -230,7 +233,11 @@ int main(int argc, char** argv) {
     cout << "........................." << endl;
     cout << "A != B " << ((A != B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
-
+    cout << "A >= B " << ((A >= B) ? "  True \n" : "  False  \n");
+    cout << "........................." << endl;
+    A %= B;
+    cout << "A %=B:" << A << endl;
+    cout << "........................." << endl;
     C = A = B = ++C;
     cout << "A = " << A << "\n";
     cout << "B = " << B << "\n";
