@@ -52,6 +52,10 @@ int main(int argc, char** argv) {
     cout << "A == B " << ((A == B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
     cout << "........................." << endl;
+    A ^= B;
+    cout << "A ^= B " <<A<< endl;
+    cout << "........................." << endl;
+    cout << "........................." << endl;
     C = A;
     cout << "A > B " << ((A > B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
@@ -70,6 +74,7 @@ int main(int argc, char** argv) {
     cout << "A <= B " << ((A <= B) ? "  True \n" : "  False  \n");
     cout << "........................." << endl;
     cout << "........................." << endl;
+   
     A %= B;
     cout << "A %=B:" << A << endl;
     cout << "........................." << endl;

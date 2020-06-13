@@ -34,6 +34,7 @@ public:
     bool operator > (const Pareja& p) const;
     bool operator < (const Pareja& p)const;
     bool operator % (const Pareja& p)const;
+    Pareja& operator ^=(const Pareja& p);
     bool operator !=  (const Pareja& p)const;
     bool operator >=  (const Pareja& p)const;
     bool operator <=  (const Pareja& p)const;
@@ -119,6 +120,13 @@ bool Pareja::operator % (const Pareja& p) const {
         return 1;
     else
         return 0;
+}
+
+inline Pareja& Pareja::operator ^= (const Pareja& p)
+{
+    this->a ^= p.a;
+    this->b ^= p.b;
+    return *this;
 }
 
 // Sobrecarga del operador diferente de
