@@ -20,7 +20,7 @@ public:
     void setNombre(std::string nombre);
     void setId(std::string id);
 
-    Cuenta** cuenta;
+    //Cuenta** cuenta;
 
 protected:
 private:
@@ -28,9 +28,7 @@ private:
     std::string cedula;
     std::string email;
     std::string direccion;
-    Cuenta cuenta;
-
-
+    //Cuenta cuenta;
 };
 
 #endif

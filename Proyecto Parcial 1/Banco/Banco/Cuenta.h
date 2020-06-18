@@ -31,7 +31,7 @@ private:
     double monto;
     long int numeroCuenta;
     Transacciones transaccion;
-    TipoCuenta tipoCuenta;
+    //TipoCuenta t();
 
 
 };

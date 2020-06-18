@@ -5,27 +5,49 @@
  * Purpose: Declaration of the class TipoCuenta
  ***********************************************************************/
 
+
+
 #if !defined(__Banco_TipoCuenta_h)
 #define __Banco_TipoCuenta_h
 #include "Cuenta.h"
+#include <string>
 
-class Cuenta;
+using namespace std;
+
+//class Cuenta;
 
 class TipoCuenta
 {
 public:
     string getNombre(void);
     void setNombre(string newNombre);
+    TipoCuenta(int num);
     TipoCuenta();
     int getId(void);
     void setId(int newId);
-    Cuenta* cuenta;
+    //Cuenta* cuenta;
+
 protected:
+
 private:
-    std :: string nombre;
+    string nombre;
     int id;
-
-
 };
+
+inline TipoCuenta::TipoCuenta() {
+    TipoCuenta::nombre = "";
+    TipoCuenta::id = 0;
+}
+
+inline TipoCuenta::TipoCuenta(int num) {
+    if (num == 1) {
+        TipoCuenta::nombre = "Ahorros";
+        TipoCuenta::id = 1;
+    }
+    else {
+        TipoCuenta::nombre = "Credito";
+        TipoCuenta::id = 2;
+    }
+}
 
 #endif
