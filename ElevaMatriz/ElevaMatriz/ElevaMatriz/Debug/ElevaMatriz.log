@@ -1,2 +1,5 @@
 ﻿  Aplicativo.cpp
-  ElevaMatriz.vcxproj -> C:\Users\Kevin Caicedo\source\repos\ElevaMatriz\Debug\ElevaMatriz.exe
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ElevaMatriz\ElevaMatriz\ElevaMatriz\Validacion.h(15,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ElevaMatriz\ElevaMatriz\ElevaMatriz\Validacion.h(30,13): warning C4101: 'e': variable local sin referencia
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ElevaMatriz\ElevaMatriz\ElevaMatriz\Aplicativo.cpp(20,6): warning C4101: 'num': variable local sin referencia
+  ElevaMatriz.vcxproj -> C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ElevaMatriz\ElevaMatriz\Debug\ElevaMatriz.exe
