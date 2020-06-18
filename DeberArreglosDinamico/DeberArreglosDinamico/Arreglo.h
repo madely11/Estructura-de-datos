@@ -16,7 +16,7 @@
 #include<iostream>
 using namespace std;
 
-class Arreglo
+template <typename tipo> class Arreglo
 {
 public:
 	int* getArreglo(void);
@@ -28,9 +28,8 @@ public:
 	void imprimir();
 	Arreglo();
 
-protected:
 private:
-	int* arreglo;
+	tipo* arreglo;
 	int longitud;
 
 };
@@ -42,7 +41,8 @@ private:
 	@returns arreglo
 */
 
-int* Arreglo::getArreglo(void)
+template <typename tipo>
+int* Arreglo <tipo> ::getArreglo(void)
 {
 	return arreglo;
 }
@@ -53,7 +53,8 @@ int* Arreglo::getArreglo(void)
 	@returns arreglo que contiene el nuevo arreglo
 */
 
-void Arreglo::setArreglo(int* newArreglo)
+template <typename tipo>
+void Arreglo<tipo>::setArreglo(int* newArreglo)
 {
 	arreglo = newArreglo;
 }
@@ -61,8 +62,8 @@ void Arreglo::setArreglo(int* newArreglo)
 /**
 	@brief Funcion encerar
 */
-
-void Arreglo::encerar()
+template <typename tipo>
+void Arreglo <tipo> ::encerar()
 {
 	for (int i = 0; i < longitud; i++)
 	{
@@ -75,8 +76,8 @@ void Arreglo::encerar()
 	@brief Funcion ingresar
 	@param valor que representa la cantidad de memoria sseparada para el arreglo
 */
-
-void Arreglo::ingresar(int valor)
+template <typename tipo>
+void Arreglo <tipo> :: ingresar(int valor)
 {
 	longitud++;
 	arreglo = (int*)realloc(arreglo, longitud * sizeof(int));
@@ -86,8 +87,8 @@ void Arreglo::ingresar(int valor)
 /**
 	@brief Funcion imprimir
 */
-
-void Arreglo::imprimir()
+template <typename tipo>
+void Arreglo <tipo> :: imprimir()
 {
 	for (int i = 0; i < longitud; i++)
 	{
@@ -101,8 +102,8 @@ void Arreglo::imprimir()
 	@brief Funcion get de longitud
 	@returns longitud
 */
-
-int Arreglo::getLongitud(void)
+template <typename tipo>
+int Arreglo <tipo> ::getLongitud(void)
 {
 	return longitud;
 }
@@ -111,8 +112,8 @@ int Arreglo::getLongitud(void)
 	@brief Funcion ser para longitud
 	@param entero longitud
 */
-
-void Arreglo::setLongitud(int newLongitud)
+template <typename tipo>
+void Arreglo <tipo> :: setLongitud(int newLongitud)
 {
 	longitud = newLongitud;
 }
@@ -121,7 +122,8 @@ void Arreglo::setLongitud(int newLongitud)
 	@brief Funcion constrcutor de arreglo
 */
 
-Arreglo::Arreglo()
+template <typename tipo>
+inline Arreglo <tipo>  ::Arreglo()
 {
 	longitud = 0;
 	arreglo = (int*) malloc(longitud * sizeof(int));

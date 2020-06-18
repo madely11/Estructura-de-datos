@@ -31,7 +31,7 @@ using namespace std;
 */
 
 int main() {
-	Arreglo arr1;
+	Arreglo <int> arr1;
 	Ingreso ingreso;
 	Operaciones op;
 	string dim;

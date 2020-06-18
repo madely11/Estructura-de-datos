@@ -12,20 +12,25 @@
 
 #include <iostream>
 #include "Matriz.h"
-
+#include <sstream>
+#include "Ingreso.h"
 int main()
-{
+{	
+	Ingreso ingreso;
+	int num;
+	string dim;
+	
 	int dimension, exponente;
 	int** matriz, ** matriz2;
-	Matriz mat1, matr;
+	Matriz<int> mat1, matr;
 	matriz = 0;
 	matriz2 = 0;
-	printf("\nIngrese la dimension de la matriz: ");
-	scanf_s("%d", &dimension);
-	printf("\nIngrese el exponente de la matriz:");
-	scanf_s("%d", &exponente);
-	mat1 = Matriz::Matriz(matriz, dimension);
-	matr = Matriz::Matriz(matriz2, dimension);
+	dim = ingreso.leer("\nIngrese la dimension de la matriz: ", 1);
+	istringstream(dim) >> dimension;
+	dim = ingreso.leer("\nIngrese el exponente de la matriz:", 1);
+	istringstream(dim) >> exponente;
+	mat1 = Matriz<int>::Matriz(matriz, dimension);
+	matr = Matriz<int>::Matriz(matriz2, dimension);
 	printf("\nIngrese los numeros de la matriz:");
 	mat1.ingresar(mat1);
 	mat1.imprimir(mat1);

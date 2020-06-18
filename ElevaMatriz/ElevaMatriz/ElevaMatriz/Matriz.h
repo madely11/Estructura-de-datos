@@ -7,52 +7,66 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "conio.h"
+#include <iostream>
+#include <iomanip>
+#include <cstdlib>
+#include "Ingreso.h"
+#include <sstream>
+using namespace std;
 
+template<typename T> class Matriz;
+template<typename T> ostream &operator<< (ostream& salida, Matriz<T>& z);
+template<class T>
 class Matriz
 {
 public:
 	int getDimension(void);
 	void setDimension(int nuevaDimension);
-	int** getMatriz(void);
-	void setMatriz(int** nuevaMatriz);
-	void encerar(int** mat, int dimension);
-	void igualar(int** mat1, int** mat2, int dimension);
-	int** instanciar(int dimension);
+	T** getMatriz(void);
+	void setMatriz(T** nuevaMatriz);
+	void encerar(T** mat, int dimension);
+	void igualar(T** mat1, T** mat2, int dimension);
+	T** instanciar(int dimension);
 	void imprimir(Matriz mat1);
 	void ingresar(Matriz mat);
-	Matriz(int** matriz, int dimension);
+	Matriz(T** matriz, int dimension);
 	Matriz();
 	void elevar(Matriz mat1, Matriz mat2, int exponente);
 
 protected:
 private:
-	int** matriz;
+	T** matriz;
 	int dimension;
 
 
 };
 //Obten dimension
-int Matriz::getDimension(void)
+template<typename T>
+int Matriz<T>::getDimension(void)
 {
 	return dimension;
 }
 //Cambia dimension
-void Matriz::setDimension(int newDimension)
+template<typename T>
+void Matriz<T>::setDimension(int newDimension)
 {
 	dimension = newDimension;
 }
 //Obtener matriz 
-int** Matriz::getMatriz(void)
+template<typename T>
+T** Matriz<T>::getMatriz(void)
 {
 	return matriz;
 }
 //Cambiar matriz
-void Matriz::setMatriz(int** newMatriz)
+template<typename T>
+void Matriz<T>::setMatriz(T** newMatriz)
 {
 	matriz = newMatriz;
 }
 // LLenar matriz
-void Matriz::encerar(int** mat, int dimension)
+template<typename T>
+void Matriz<T>::encerar(T** mat, int dimension)
 {
 	int i, j;
 	for (i = 0; i < dimension; i++)
@@ -61,7 +75,8 @@ void Matriz::encerar(int** mat, int dimension)
 	return;
 }
 //Iguala matriz
-void Matriz::igualar(int** mat1, int** mat2, int dimension)
+template<typename T>
+void Matriz<T>::igualar(T** mat1, T** mat2, int dimension)
 {
 	for (int i = 0; i < dimension; i++) {
 		for (int j = 0; j < dimension; j++)
@@ -71,17 +86,21 @@ void Matriz::igualar(int** mat1, int** mat2, int dimension)
 
 	}
 }
+
 // Instanciar matriz
-int** Matriz::instanciar(int dimension)
+template<typename T>
+T** Matriz<T>::instanciar(int dimension)
 {
-	int** m, j;
+	T** m;
+	int j;
 	m = (int**)malloc(dimension * sizeof(int*));
 	for (j = 0; j < dimension; j++)
 		*(m + j) = (int*)malloc(dimension * sizeof(int));
 	return m;
 }
 //Imprimir la matriz
-void Matriz::imprimir(Matriz mat1)
+template<typename T>
+void Matriz<T>::imprimir(Matriz mat1)
 {
 	for (int i = 0; i < mat1.dimension; i++) {
 		for (int j = 0; j < mat1.dimension; j++)
@@ -93,15 +112,25 @@ void Matriz::imprimir(Matriz mat1)
 	}
 }
 //Ingrese los datos de la matriz 
-void Matriz::ingresar(Matriz mat)
+template<typename T>
+void Matriz<T>::ingresar(Matriz mat)
 {
-	for (int i = 0; i < mat.dimension; i++)
+	Ingreso ingreso;
+	int num;
+	string dim;
+	for (int i = 0; i < mat.dimension; i++) {
 		for (int j = 0; j < mat.dimension; j++)
-			scanf_s("%d", &(*(*(mat.matriz + i) + j)));
+		{
+			dim = ingreso.leer(" ", 1);
+			istringstream(dim) >> num;
+			*(*(mat.matriz + i) + j) = num;
+		}
+	}
 }
 
 //Constructor
-inline Matriz::Matriz(int** _matriz, int _dimension)
+template<typename T>
+inline Matriz<T>::Matriz(T** _matriz, int _dimension)
 {
 	_matriz = instanciar(_dimension);
 	Matriz::matriz = _matriz;
@@ -109,14 +138,16 @@ inline Matriz::Matriz(int** _matriz, int _dimension)
 
 }
 //Constructor
-inline Matriz::Matriz()
+template<typename T>
+inline Matriz<T>::Matriz()
 {
 }
 //Funcion para elevar la matriz 
-void Matriz::elevar(Matriz mat, Matriz matr, int exponente)
+template<typename T>
+void Matriz<T>::elevar(Matriz mat, Matriz matr, int exponente)
 {
 
-	int** mat2;
+	T** mat2;
 	mat2 = instanciar(mat.dimension);
 	encerar(mat2, mat.dimension);
 	igualar(mat2, mat.matriz, mat.dimension);
