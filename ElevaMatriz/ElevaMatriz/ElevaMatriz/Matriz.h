@@ -34,7 +34,7 @@ public:
 	void elevar(Matriz mat1, Matriz mat2, int exponente);
 
 protected:
-private:
+private:	
 	T** matriz;
 	int dimension;
 
