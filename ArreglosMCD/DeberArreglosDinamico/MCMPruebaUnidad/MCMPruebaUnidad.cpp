@@ -21,7 +21,7 @@ namespace MCMPruebaUnidad
 			int resultado;
 
 			//Act
-			Operaciones op;
+			Operaciones <int> op;
 			resultado = op.calcularMCM(arr1.getArreglo(), arr1.getLongitud());
 
 			//Assert

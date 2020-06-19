@@ -19,8 +19,8 @@ using namespace std;
 template <typename tipo> class Arreglo
 {
 public:
-	int* getArreglo(void);
-	void setArreglo(int* newArreglo);
+	tipo* getArreglo(void);
+	void setArreglo(tipo* newArreglo);
 	int getLongitud(void);
 	void setLongitud(int newLongitud);
 	void encerar();
@@ -42,7 +42,7 @@ private:
 */
 
 template <typename tipo>
-int* Arreglo <tipo> ::getArreglo(void)
+tipo* Arreglo <tipo> ::getArreglo(void)
 {
 	return arreglo;
 }
@@ -54,7 +54,7 @@ int* Arreglo <tipo> ::getArreglo(void)
 */
 
 template <typename tipo>
-void Arreglo<tipo>::setArreglo(int* newArreglo)
+void Arreglo<tipo>::setArreglo(tipo* newArreglo)
 {
 	arreglo = newArreglo;
 }
@@ -80,7 +80,7 @@ template <typename tipo>
 void Arreglo <tipo> :: ingresar(int valor)
 {
 	longitud++;
-	arreglo = (int*)realloc(arreglo, longitud * sizeof(int));
+	arreglo = (tipo*)realloc(arreglo, longitud * sizeof(tipo));
 	*(arreglo + (longitud-1)) = valor;
 }
 
@@ -126,7 +126,7 @@ template <typename tipo>
 inline Arreglo <tipo>  ::Arreglo()
 {
 	longitud = 0;
-	arreglo = (int*) malloc(longitud * sizeof(int));
+	arreglo = (tipo*) malloc(longitud * sizeof(tipo));
 }
 
 #endif

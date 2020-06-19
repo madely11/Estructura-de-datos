@@ -33,7 +33,7 @@ using namespace std;
 int main() {
 	Arreglo <int> arr1;
 	Ingreso ingreso;
-	Operaciones op;
+	Operaciones <int> op;
 	string dim;
 	int valor=1;
 	int mcd, mcm;
@@ -54,6 +54,7 @@ int main() {
 
 
 	mcd = op.calcularMCD(arr1.getArreglo(), arr1.getLongitud());
+
 	mcm = op.calcularMCM(arr1.getArreglo(), arr1.getLongitud());
 	cout << "El MCD es: " << mcd << endl;
 	cout << "EL MCM es: " << mcm << endl;

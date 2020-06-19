@@ -21,7 +21,7 @@ namespace MCDPruebaDeUnidad
 			int resultado;
 
 			//Act
-			Operaciones op;
+			Operaciones <int> op;
 			resultado = op.calcularMCD(arr1.getArreglo(), arr1.getLongitud());
 
 			//Assert

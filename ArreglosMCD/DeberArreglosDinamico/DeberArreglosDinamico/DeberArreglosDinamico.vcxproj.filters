@@ -29,8 +29,5 @@
     <ClInclude Include="Ingreso.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="Validacion.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

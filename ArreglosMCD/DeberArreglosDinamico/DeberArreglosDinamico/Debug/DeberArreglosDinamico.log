@@ -1,4 +1,1 @@
-﻿  Aplicativo.cpp
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\DeberArreglosDinamico\DeberArreglosDinamico\Validacion.h(36,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\DeberArreglosDinamico\DeberArreglosDinamico\Validacion.h(51,13): warning C4101: 'e': unreferenced local variable
-  DeberArreglosDinamico.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\DeberArreglosDinamico\Debug\DeberArreglosDinamico.exe
+﻿  DeberArreglosDinamico.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArreglosMCD\DeberArreglosDinamico\Debug\DeberArreglosDinamico.exe

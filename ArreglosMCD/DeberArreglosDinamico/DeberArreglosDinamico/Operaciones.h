@@ -17,27 +17,37 @@
 	@date 6/2020
 */
 
+#include "Arreglo.h"
+
 #if !defined(__UML_Class_Diagram_3_Operaciones_h)
 #define __UML_Class_Diagram_3_Operaciones_h
 
-class Operaciones
+template <typename tipo> class Operaciones
 {
 public:
-	int calcularMCM(int* arreglo, int longitud);
-	int calcularMCD(int* arreglo, int longitud);
+	int calcularMCM(tipo* arreglo, int longitud);
+	int calcularMCD(tipo* arreglo, int longitud);
 	int MCD(int a, int b);
+	Operaciones();
 
 protected:
 private:
 
 };
 
+template <typename tipo>
+inline Operaciones<tipo>  :: Operaciones(){
+
+}
+
+
 /**
 	@brief Funcion calcular MCM de un arreglo
 	@param arreglo guarda numeros de un arreglo ingresado, longitud dato que guarda la longitud del arreglo
 	@returns a que representa el valor dell MCM
 */
-int Operaciones::calcularMCM(int* arreglo, int longitud)
+template <typename tipo>
+int Operaciones <tipo> :: calcularMCM(tipo* arreglo, int longitud)
 {
 	int a, b, mcd;
 	a = *(arreglo);
@@ -61,8 +71,8 @@ int Operaciones::calcularMCM(int* arreglo, int longitud)
 	@param arreglo guarda numeros de un arreglo ingresado, longitud dato que guarda la longitud del arreglo
 	@returns a que representa el valor dell MCD
 */
-
-int Operaciones::calcularMCD(int* arreglo, int longitud)
+template <typename tipo>
+int Operaciones <tipo> ::calcularMCD(tipo* arreglo, int longitud)
 {
 	int a, b;
 	a = *(arreglo);
@@ -86,7 +96,8 @@ int Operaciones::calcularMCD(int* arreglo, int longitud)
 	@returns a que representa el valor dell MCD entre estos dos numeros
 */
 
-int Operaciones::MCD(int a, int b)
+template <typename tipo>
+int Operaciones <tipo>::MCD(int a, int b)
 {
 	int residuo = 1;
 	int cociente;
