@@ -1,0 +1,5 @@
+﻿  Aplicativo.cpp
+C:\Users\madel\Documents\III Semestre\Estructura de datos\SumaDeFracciones\Codigo\SumaDeFracciones\SumaDeFracciones\Validacion.h(15,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\madel\Documents\III Semestre\Estructura de datos\SumaDeFracciones\Codigo\SumaDeFracciones\SumaDeFracciones\Validacion.h(33,21): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\SumaDeFracciones\Codigo\SumaDeFracciones\SumaDeFracciones\Validacion.h(48,13): warning C4101: 'e': unreferenced local variable
+  SumaDeFracciones.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\SumaDeFracciones\Codigo\SumaDeFracciones\Debug\SumaDeFracciones.exe
