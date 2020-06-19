@@ -14,7 +14,7 @@ namespace MCDPruebaDeUnidad
 		TEST_METHOD(TestMethod1)
 		{
 			// Arrange
-			Arreglo arr1;
+			Arreglo <int> arr1;
 			arr1.ingresar(5);
 			arr1.ingresar(14);
 			int resulEsperado = 1;

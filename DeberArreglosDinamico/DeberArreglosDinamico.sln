@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DeberArreglosDinamico", "De
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MCDPruebaDeUnidad", "MCDPruebaDeUnidad\MCDPruebaDeUnidad.vcxproj", "{BDC55976-A29B-4811-9B04-6C2BBE18698E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MCMPruebaUnidad", "MCMPruebaUnidad\MCMPruebaUnidad.vcxproj", "{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{BDC55976-A29B-4811-9B04-6C2BBE18698E}.Release|x64.Build.0 = Release|x64
 		{BDC55976-A29B-4811-9B04-6C2BBE18698E}.Release|x86.ActiveCfg = Release|Win32
 		{BDC55976-A29B-4811-9B04-6C2BBE18698E}.Release|x86.Build.0 = Release|Win32
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Debug|x64.ActiveCfg = Debug|x64
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Debug|x64.Build.0 = Debug|x64
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Debug|x86.ActiveCfg = Debug|Win32
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Debug|x86.Build.0 = Debug|Win32
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Release|x64.ActiveCfg = Release|x64
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Release|x64.Build.0 = Release|x64
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Release|x86.ActiveCfg = Release|Win32
+		{78413274-2E88-485E-AC8E-1F3AF6F6DFBD}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
