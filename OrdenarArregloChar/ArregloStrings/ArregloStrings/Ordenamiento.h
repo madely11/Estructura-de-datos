@@ -39,16 +39,13 @@ public:
 	void ordenarNum(int i, int j, T* aux, T2** arreglo);
 	void ordenar(int i, int j, T* aux, T2** arreglo);
 };
-<<<<<<< HEAD:ArregloStrings/ArregloStrings/Ordenamiento.h
 /*@Funcion que ordena  numeros de un arreglo  */
-=======
 
 
 /**
 	@brief Funcion para ordenar un arreglo de char de numeros
 	@param i entero, j entero, arreglo tipo T, matriz de arreglos tipo T2
 */
->>>>>>> aa570aff63a1b33ef3ed842caef5b9249af1eff0:OrdenarArregloChar/ArregloStrings/ArregloStrings/Ordenamiento.h
 template<typename T, typename T2>
 void Ordenamiento<T,T2>::ordenarNum(int i, int j, T* aux, T2** arreglo) {
 	if (i < longitud) {
@@ -68,15 +65,15 @@ void Ordenamiento<T,T2>::ordenarNum(int i, int j, T* aux, T2** arreglo) {
 	}
 }
 
-<<<<<<< HEAD:ArregloStrings/ArregloStrings/Ordenamiento.h
+
 //@Funcion que ordena string de palabras
-=======
+
 
 /**
 	@brief Funcion para ordenar un arreglo de char
 	@param i entero, j entero, arreglo tipo T, matriz de arreglos tipo T2
 */
->>>>>>> aa570aff63a1b33ef3ed842caef5b9249af1eff0:OrdenarArregloChar/ArregloStrings/ArregloStrings/Ordenamiento.h
+
 template<typename T, typename T2>
 void  Ordenamiento<T, T2>::ordenar(int i, int j, T* aux, T2** arreglo) {
 	if (i < longitud) {
