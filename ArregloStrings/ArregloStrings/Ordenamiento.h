@@ -21,17 +21,17 @@ public:
 
 
 };
-
+/*@Funcion que ordena  numeros de un arreglo  */
 template<typename T, typename T2>
 void Ordenamiento<T,T2>::ordenarNum(int i, int j, T* aux, T2** arreglo) {
 	if (i < longitud) {
-		/* indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
+		/*@ indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
 		j = i;
 		aux = *(arreglo + i);
-		// se localiza el punto de inserción explorando hacia abajo
+		//@se localiza el punto de inserción explorando hacia abajo
 		while (j > 0 && atoll(aux) < atoll(*(arreglo + (j - 1))))
 		{
-			// desplazar elementos hacia arriba para hacer espacio
+			//@desplazar elementos hacia arriba para hacer espacio
 			*(arreglo + j) = *(arreglo + (j - 1));
 			j--;
 		}
@@ -41,17 +41,17 @@ void Ordenamiento<T,T2>::ordenarNum(int i, int j, T* aux, T2** arreglo) {
 	}
 }
 
-//ordena string de palabras
+//@Funcion que ordena string de palabras
 template<typename T, typename T2>
 void  Ordenamiento<T, T2>::ordenar(int i, int j, T* aux, T2** arreglo) {
 	if (i < longitud) {
-		/* indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
+		/*@ indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
 		j = i;
 		aux = *(arreglo + i);
-		// se localiza el punto de inserción explorando hacia abajo
+		// @se localiza el punto de inserción explorando hacia abajo
 		while (j > 0 && strcmp(aux, *(arreglo + (j - 1))) < 0)
 		{
-			// desplazar elementos hacia arriba para hacer espacio
+			// @desplazar elementos hacia arriba para hacer espacio
 			*(arreglo + j) = *(arreglo + (j - 1));
 			j--;
 		}
