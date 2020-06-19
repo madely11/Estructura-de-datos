@@ -12,7 +12,7 @@
 
 /**
 	@file Aplicativo.cpp
-	@brief Funcion para ingresar y llamar otras funciones
+	@brief Funcion para ingresar, imprimir y llamar otras funciones
 	@author Madely Betancourt y Kevin Caicedo
 	@date 6/2020
 */
@@ -52,7 +52,6 @@ int main() {
 		istringstream(dim) >> valor;
 	}
 
-	//arr1.imprimir();
 
 	mcd = op.calcularMCD(arr1.getArreglo(), arr1.getLongitud());
 	mcm = op.calcularMCM(arr1.getArreglo(), arr1.getLongitud());
