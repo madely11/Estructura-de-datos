@@ -1,55 +1,18 @@
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <string.h>	
 #include <conio.h>
 #include <ctype.h>  
-#define longitud 10
-#define longitud2 15
+#include "Ordenamiento.h"
+
 using namespace std;
-
-//ordena strings de numeros
-void ordenarNum(int i, int j, char* aux, char** arreglo) {
-	if (i < longitud) {
-		/* indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
-		j = i;
-		aux = *(arreglo + i);
-		// se localiza el punto de inserción explorando hacia abajo
-		while (j > 0 && atoll(aux) < atoll(*(arreglo + (j - 1))))
-		{
-			// desplazar elementos hacia arriba para hacer espacio
-			*(arreglo + j) = *(arreglo + (j - 1));
-			j--;
-		}
-		*(arreglo + j) = aux;
-		i++;
-		ordenarNum(i, j, aux, arreglo);
-	}
-}
-
-//ordena string de palabras
-void ordenar(int i, int j, char *aux, char **arreglo) {
-	if (i < longitud) {
-		/* indice j es para explorar la sublista a[i-1]..a[0] buscando la posicion correcta del elemento destino */
-		j = i;
-		aux = *(arreglo + i);
-		// se localiza el punto de inserción explorando hacia abajo
-		while (j > 0 && strcmp(aux, *(arreglo + (j - 1))) < 0)
-		{
-			// desplazar elementos hacia arriba para hacer espacio
-			*(arreglo + j) = *(arreglo + (j - 1));
-			j--;
-		}
-		*(arreglo + j) = aux;
-		i++;
-		ordenar(i, j, aux, arreglo);
-	}
-}
 
 int main() {
 	char** arreglo = NULL;
+	Ordenamiento<char,char> ordenar;
 	arreglo = (char**)malloc(longitud * sizeof(char*));
-
+	
 	if (!arreglo) {
 		cout << "No hay espacio" << endl;
 		exit(1);
@@ -63,7 +26,7 @@ int main() {
 	//ingresar
 	for (int i = 0; i < longitud; i++)
 	{
-		cout << "Ingrese el valor " << i + 1 << endl;
+		cout << "Ingrese el nombre " << i + 1 << endl;
 		cin >> *(arreglo + i);
 	}
 
@@ -77,7 +40,7 @@ int main() {
 			int i = 1;
 			int j = 0;
 			char* aux = NULL;
-			ordenarNum(i, j, aux, arreglo);
+			ordenar.ordenarNum(i, j, aux, arreglo);
 		}
 	}
 
@@ -85,7 +48,7 @@ int main() {
 		int i = 1;
 		int j = 0;
 		char* aux = NULL;
-		ordenar(i, j, aux, arreglo);
+		ordenar.ordenar(i, j, aux, arreglo);
 	}
 
 
