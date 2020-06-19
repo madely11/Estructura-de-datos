@@ -1,3 +1,25 @@
+/******************************************************************
+*            UNIVERSIDAD DE LAS FUERZAS ARMADAS ESPE              *
+* PROGRAMA PARA ORDENAR ALFABETICAMENTE NOMBRES Y APELLIDOS Y     *
+* DE MENOR A MAYOR NUMEROS                                        *
+* AUTORES: Madely Betancourt, Kevin Caicedo                       *
+* CARRERA: Ingenieria de Software                                 *
+* SEMESTRE: Tercer semestre                                       *
+* MATERIA: Estructura de Datos                                    *
+* NRC: 6396														  *
+* FECHA DE CREACIÓN: 09/06/20									  *
+* FECHA DE MODIFICACIÓN: 19/06/20								  *
+******************************************************************/
+
+
+/**
+	@file Aplicativo.cpp
+	@brief Funcion para ingresar, imprimir y llamar otras funciones
+	@author Madely Betancourt y Kevin Caicedo
+	@date 6/2020
+*/
+
+
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
@@ -8,6 +30,11 @@
 
 using namespace std;
 
+/**
+	@brief para verificar que un char* sea una palabra
+	@param palabra a ser comprobada
+	@returns un booleano
+*/
 bool verificarPalabra(char* palabra) {
 	int aux2 = 0;
 	//verifica si todas son letras
@@ -22,6 +49,11 @@ bool verificarPalabra(char* palabra) {
 		return true;
 }
 
+/**
+	@brief para veriificar que un char* sea un arreglo de numeros
+	@param palabra a ser comprobada
+	@returns un booleano
+*/
 bool verificarNum(char* palabra) {
 	int aux = 0;
 	//verifica si todos son numeros
@@ -36,6 +68,11 @@ bool verificarNum(char* palabra) {
 		return true;
 }
 
+/**
+	@brief para verificar que un char* tenga letras y numeros
+	@param palabra a ser comprobada
+	@returns un booleano
+*/
 bool verificarMixto(char* palabra) {
 	int aux3 = 0;
 	for (int i = 0; i < strlen(palabra); i++)
@@ -51,6 +88,11 @@ bool verificarMixto(char* palabra) {
 		return false;
 }
 
+/**
+	@brief para verificar que un char* sea una palabra, numero, mezcla o caracteres especiales
+	@param palabra a ser comprobada
+	@returns un booleano
+*/
 bool verificar(char* palabra) {
 	int aux3 = 0;
 	int aux2 = 0;
@@ -86,6 +128,10 @@ bool verificar(char* palabra) {
 		return true;
 }
 
+/**
+	@brief Funcion main donde se hace la llamada a las librerias por medio de los objetos y a funciones propias
+	@returns 0 para que finalize el programa
+*/
 int main() {
 	char** arreglo = NULL;
 	Ordenamiento<char,char> ordenar;
