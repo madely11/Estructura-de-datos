@@ -1,0 +1,10 @@
+﻿  Aplicativo.cpp
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(14,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(28,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(41,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(59,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(67,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(74,20): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(169,13): warning C4101: 'e': unreferenced local variable
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\ArregloStrings\Aplicativo.cpp(87): warning C4715: 'verificar': not all control paths return a value
+  ArregloStrings.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArregloStrings\Debug\ArregloStrings.exe
