@@ -151,19 +151,29 @@ void Matriz<T>::elevar(Matriz mat, Matriz matr, int exponente)
 	mat2 = instanciar(mat.dimension);
 	encerar(mat2, mat.dimension);
 	igualar(mat2, mat.matriz, mat.dimension);
-
-	for (int l = 0; l < exponente - 1; l++)
-	{
-		encerar(matr.matriz, mat.dimension);
-		for (int i = 0; i < mat.dimension; i++) {
-			for (int j = 0; j < mat.dimension; j++) {
-				for (int h = 0; h < mat.dimension; h++) {
-					*(*(matr.matriz + i) + j) = *(*(matr.matriz + i) + j) + (*(*(mat.matriz + i) + h)) * (*(*(mat2 + h) + j));
+	if (exponente == 0) {
+			for (int i = 0; i < mat.dimension; i++) {
+				for (int j = 0; j < mat.dimension; j++) {
+					*(*(matr.matriz + i) + j) = 1;
 				}
 			}
-		}encerar(mat2, mat.dimension);
-		igualar(mat2, matr.matriz, mat.dimension);
-
 	}
+	else{
+		for (int l = 0; l < exponente - 1; l++)
+		{
+			encerar(matr.matriz, mat.dimension);
+			for (int i = 0; i < mat.dimension; i++) {
+				for (int j = 0; j < mat.dimension; j++) {
+					for (int h = 0; h < mat.dimension; h++) {
+						*(*(matr.matriz + i) + j) = *(*(matr.matriz + i) + j) + (*(*(mat.matriz + i) + h)) * (*(*(mat2 + h) + j));
+					}
+				}
+			}encerar(mat2, mat.dimension);
+			igualar(mat2, matr.matriz, mat.dimension);
+
+		}
+	}
+		
+	
 }
 
