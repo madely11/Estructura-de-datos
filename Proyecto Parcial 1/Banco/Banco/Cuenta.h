@@ -8,32 +8,47 @@
 #if !defined(__Banco_Cuenta_h)
 #define __Banco_Cuenta_h
 
-#include "Transacciones.h"
 #include "TipoCuenta.h"
-#include "Cliente.h"
+#include "FileManager.h"
 
 class Cuenta
 {
 public:
     int getNumc(void);
-    Cliente getPersona(void);
     double getMonto(void);
     void setNumc(int numC);
-    void setPersona(Cliente persona);
     double setMonto(double monto);
     void crearCuenta(void);
     void cerrarCuenta(void);
     void depositar(void);
     void transferir(int numCuenta, double monto);
+    void hacerString();
+    Cuenta(int, string);
 
 protected:
 private:
     double monto;
-    long int numeroCuenta;
-    Transacciones transaccion;
-    //TipoCuenta t();
-
-
+    int numeroCuenta;
+    string idCliente;
+    string dato;
+    //Transacciones transaccion;
+    TipoCuenta* tipo;
 };
+
+
+Cuenta::Cuenta(int num, string id) {
+    tipo = new TipoCuenta(num);
+    this->idCliente = id;
+    this->numeroCuenta = 1;
+    this->monto = 5;
+    hacerString();
+    FileManager fileM("cuenta.txt");
+    fileM.agregarLinea(dato);
+
+}
+
+void Cuenta::hacerString() {
+    dato =idCliente + "," + to_string(numeroCuenta) + "," + to_string(monto) + "," + to_string(tipo->getId());
+}
 
 #endif

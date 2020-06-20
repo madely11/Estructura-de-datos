@@ -9,8 +9,7 @@
 
 #if !defined(__Banco_TipoCuenta_h)
 #define __Banco_TipoCuenta_h
-#include "Cuenta.h"
-#include <string>
+
 
 using namespace std;
 
@@ -22,10 +21,8 @@ public:
     string getNombre(void);
     void setNombre(string newNombre);
     TipoCuenta(int num);
-    TipoCuenta();
     int getId(void);
     void setId(int newId);
-    //Cuenta* cuenta;
 
 protected:
 
@@ -34,19 +31,15 @@ private:
     int id;
 };
 
-inline TipoCuenta::TipoCuenta() {
-    TipoCuenta::nombre = "";
-    TipoCuenta::id = 0;
-}
 
-inline TipoCuenta::TipoCuenta(int num) {
+TipoCuenta::TipoCuenta(int num) {
     if (num == 1) {
-        TipoCuenta::nombre = "Ahorros";
-        TipoCuenta::id = 1;
+        this -> nombre = "Ahorros";
+        this -> id = 1;
     }
     else {
-        TipoCuenta::nombre = "Credito";
-        TipoCuenta::id = 2;
+        this ->nombre = "Credito";
+        this -> id = 2;
     }
 }
 

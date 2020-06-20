@@ -7,6 +7,7 @@
 #include <fstream>
 #include <math.h>
 #include "TipoCuenta.h"
+#include "Cliente.h"
 using namespace std;
 
 class Menu {
@@ -167,12 +168,19 @@ void Menu::submenu1()
 				switch (cursor)
 				{
 				case 0:
-					if(true)
-						TipoCuenta tipo1(1);
+					if (true) {
+						Cliente cliente;
+						cliente.pedirDatos(1);
+						cout << endl << "<<<<<<<<<Cuenta creada exitosamente>>>>>>>>>" << endl;
+						Sleep(1000);
+						menuTeclas();
+						//system ("pause");
+						//TipoCuenta tipo1(1);
+					}
 					break;
 				case 1:
 					if(true)
-						TipoCuenta tipo2(2);
+						//TipoCuenta tipo2(2);
 					break;
 				case 2:
 					system("cls");
@@ -182,6 +190,7 @@ void Menu::submenu1()
 					break;
 				}
 			}
+
 		}
 	}
 }
