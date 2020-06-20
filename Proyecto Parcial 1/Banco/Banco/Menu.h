@@ -169,12 +169,15 @@ void Menu::submenu1()
 				{
 				case 0:
 					if (true) {
+						system("cls");
 						Cliente cliente;
 						cliente.pedirDatos(1);
 						cout << endl << "<<<<<<<<<Cuenta creada exitosamente>>>>>>>>>" << endl;
-						Sleep(1000);
+						cout << cliente.stringConsola();
+						//Sleep(1000);
+						system("pause");
 						menuTeclas();
-						//system ("pause");
+						
 						//TipoCuenta tipo1(1);
 					}
 					break;

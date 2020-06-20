@@ -8,7 +8,7 @@
 #if !defined(__Banco_Cliente_h)
 #define __Banco_Cliente_h
 
-#include <string>
+#include <string.h>
 #include "Cuenta.h"
 //#include "FileManager.h"
 #include <iostream>
@@ -24,6 +24,7 @@ public:
     void setId(std::string id);
     void pedirDatos(int);
     void hacerString();
+    string stringConsola();
 
 protected:
 private:
@@ -31,7 +32,7 @@ private:
     std::string cedula;
     std::string email;
     std::string direccion;
-    Cuenta *cuenta;
+    Cuenta *cuenta=NULL;
     string dato;
 };
 
@@ -50,6 +51,19 @@ void Cliente :: pedirDatos(int num) {
     FileManager fileM ("cliente.txt");
     fileM.agregarLinea(dato);
 }
+
+string Cliente::stringConsola() {
+    string salida;
+    salida = "Nombre: " + nombre +
+        "\nCedula: " + cedula +
+        "\nEmail: " + email +
+        "\nDireccion: " + direccion +
+        "\nNumero de cuenta: " + to_string(cuenta->getNumc())+
+        "\nMonto: "+ to_string(cuenta->getMonto())+
+        "\nTipo de cuenta: "+ cuenta->tipo->getNombre();
+    return salida;
+}
+
 
 void Cliente::hacerString() {
     dato = nombre + "," + cedula + "," + email + "," + direccion;

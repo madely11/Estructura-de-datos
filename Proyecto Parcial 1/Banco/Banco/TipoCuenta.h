@@ -32,6 +32,16 @@ private:
 };
 
 
+inline string TipoCuenta::getNombre(void)
+{
+    return nombre;
+}
+
+inline void TipoCuenta::setNombre(string newNombre)
+{
+    this->nombre = newNombre;
+}
+
 TipoCuenta::TipoCuenta(int num) {
     if (num == 1) {
         this -> nombre = "Ahorros";
@@ -41,6 +51,16 @@ TipoCuenta::TipoCuenta(int num) {
         this ->nombre = "Credito";
         this -> id = 2;
     }
+}
+
+inline int TipoCuenta::getId(void)
+{
+    return id;
+}
+
+inline void TipoCuenta::setId(int newId)
+{
+    this->id = newId;
 }
 
 #endif

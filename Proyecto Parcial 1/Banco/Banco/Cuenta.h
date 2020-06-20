@@ -24,7 +24,7 @@ public:
     void transferir(int numCuenta, double monto);
     void hacerString();
     Cuenta(int, string);
-
+    TipoCuenta* tipo;
 protected:
 private:
     double monto;
@@ -32,23 +32,38 @@ private:
     string idCliente;
     string dato;
     //Transacciones transaccion;
-    TipoCuenta* tipo;
+    
 };
 
 
 Cuenta::Cuenta(int num, string id) {
     tipo = new TipoCuenta(num);
     this->idCliente = id;
-    this->numeroCuenta = 1;
+    FileManager fileM("cuenta.txt");
+    this->numeroCuenta = fileM.contarLineas("cuenta.txt");
     this->monto = 5;
     hacerString();
-    FileManager fileM("cuenta.txt");
-    fileM.agregarLinea(dato);
-
+   fileM.agregarLinea(dato);
 }
 
 void Cuenta::hacerString() {
-    dato =idCliente + "," + to_string(numeroCuenta) + "," + to_string(monto) + "," + to_string(tipo->getId());
+    dato =idCliente + "," + to_string(numeroCuenta)+ "," + to_string(monto) + "," + to_string(tipo->getId());
 }
-
+int Cuenta::getNumc(void)
+{
+    return numeroCuenta;
+}
+inline double Cuenta::getMonto(void)
+{
+    return monto;
+}
+inline void Cuenta::setNumc(int numC)
+{
+    this->numeroCuenta = numC;
+        
+}
+inline double Cuenta::setMonto(double monto)
+{
+    this->monto = monto;
+}
 #endif

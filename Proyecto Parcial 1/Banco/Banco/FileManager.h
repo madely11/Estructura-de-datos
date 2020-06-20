@@ -21,6 +21,8 @@ public:
 	string leer(int linea);
 	void cerrarLectura();
 	void cerrarEscritura();
+	int contarLineas(string);
+
 };
 
 
@@ -40,7 +42,10 @@ bool FileManager::crearEscritura()
 
 FileManager::FileManager(string _nombre_archivo)
 {
+	
 	nombre_archivo = _nombre_archivo;
+	crearEscritura();
+	cerrarEscritura();
 }
 
 bool FileManager::crearLectura()
@@ -86,4 +91,23 @@ void FileManager::cerrarLectura()
 void FileManager::cerrarEscritura()
 {
 	archivoEscritura.close();
+}
+
+inline int FileManager::contarLineas(string file)
+{
+	int cuentaLinea=0;
+	nombre_archivo = file;
+	string texto;
+	if (!crearLectura()) {
+		return -1;
+	}
+	while (!archivoLectura.eof())
+	{
+		
+		getline(archivoLectura, texto);
+		cuentaLinea++;
+		
+	}
+	cerrarLectura();
+	return cuentaLinea;
 }
