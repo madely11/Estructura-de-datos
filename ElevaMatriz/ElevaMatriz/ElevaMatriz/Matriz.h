@@ -154,7 +154,7 @@ void Matriz<T>::elevar(Matriz mat, Matriz matr, int exponente)
 	if (exponente == 0) {
 			for (int i = 0; i < mat.dimension; i++) {
 				for (int j = 0; j < mat.dimension; j++) {
-					*(*(matr.matriz + i) + j) = 1;
+					*(*(matr.matriz + i) + j) = 1;	
 				}
 			}
 	}

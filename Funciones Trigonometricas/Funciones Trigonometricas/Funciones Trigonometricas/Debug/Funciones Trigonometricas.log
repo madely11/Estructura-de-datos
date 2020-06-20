@@ -1,4 +1,4 @@
 ﻿  Aplicativo.cpp
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(37,21): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(52,13): warning C4101: 'e': unreferenced local variable
-  Funciones Trigonometricas.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Debug\Funciones Trigonometricas.exe
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(37,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Funciones Trigonometricas\Validacion.h(52,13): warning C4101: 'e': variable local sin referencia
+  Funciones Trigonometricas.vcxproj -> C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Funciones Trigonometricas\Funciones Trigonometricas\Debug\Funciones Trigonometricas.exe
