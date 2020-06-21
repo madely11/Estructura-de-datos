@@ -14,8 +14,8 @@ class Transacciones
 {
 public:
     void datosTransaccion();
-    float depositar(string, float);
-    float retirar(string, float);
+    int depositar(int);
+    int retirar(int);
     bool verificarSaldo(void);
 
 protected:
@@ -28,17 +28,16 @@ void Transacciones :: datosTransaccion()
     
 }
 
-float Transacciones::depositar(string mensaje, float monto) {
-    float deposito;
+int Transacciones::depositar(int monto) {
+    int deposito;
     cout << "Ingrese la cantidad de dinero a depositar: " << endl;
     cin >> deposito;
     monto += deposito;
     return monto;
-    //hacer que monto se guarde en archivo
 }
 
-float Transacciones::retirar(string mensaje, float monto) {
-    float retiro;
+int Transacciones::retirar(int monto) {
+    int retiro;
     cout << "Ingrese la cantidad de dinero a retirar: " << endl;
     cin >> retiro;
     if (monto > retiro)
@@ -47,5 +46,6 @@ float Transacciones::retirar(string mensaje, float monto) {
         cout << "Saldo insuficiente" << endl;
         Sleep(1000);
     }
+    return monto;
 }
 #endif

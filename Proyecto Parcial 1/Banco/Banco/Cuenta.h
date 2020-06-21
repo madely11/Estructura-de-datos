@@ -19,11 +19,9 @@ public:
     int getNumc(void);
     double getMonto(void);
     void setNumc(int numC);
-    double setMonto(double monto);
+    int setMonto(int monto);
     bool verificarCuenta(int);
-    void retirar(string);
-    //void cerrarCuenta(void);
-    void depositar(string);
+    
     void hacerString();
     void guardarDatos(string);
     Cuenta();
@@ -32,7 +30,7 @@ public:
     Transacciones t;
 protected:
 private:
-    float monto;
+    int monto;
     int numeroCuenta;
     string idCliente;
     string dato;   
@@ -43,7 +41,7 @@ Cuenta::Cuenta(int num, string id) {
     tipo = new TipoCuenta(num);
     this->idCliente = id;
     FileManager fileM("cuenta.txt");
-    this->numeroCuenta = fileM.contarLineas("cuenta.txt");
+    this->numeroCuenta = fileM.contarLineas();
     this->monto = 5;
     hacerString();
    fileM.agregarLinea(dato);
@@ -59,9 +57,11 @@ Cuenta::Cuenta(){
 bool Cuenta :: verificarCuenta(int num) {
     int id;
     string mensaje;
+    FileManager fileM("cuenta.txt");
+
     cout << "Ingrese el numero de cuenta: " << endl;
     cin >> id;
-    FileManager fileM("cuenta.txt");
+
     mensaje = fileM.buscarCuenta(id);
     if (mensaje._Equal("salir")) {
         cout << "Cuenta no existente" << endl;
@@ -69,10 +69,17 @@ bool Cuenta :: verificarCuenta(int num) {
         return false;
     }
     guardarDatos(mensaje);
-        if(num == 1)
-            monto = t.depositar(mensaje, monto);
-        if (num == 2)
-            monto = t.retirar(mensaje, monto);
+
+    if (num == 1) {
+        monto = t.depositar(monto);
+        hacerString();
+        fileM.actualizar(id, dato);
+     }
+    if (num == 2) {
+        monto = t.retirar(monto);
+        hacerString();
+        fileM.actualizar(id, dato);
+     }
 }
 
 void Cuenta :: guardarDatos(string mensaje) { 
@@ -103,12 +110,11 @@ void Cuenta :: guardarDatos(string mensaje) {
             i++;
         }
         i = atoi(aux_string.c_str());
-        //tipo->setId(i);
+        tipo = new TipoCuenta(i);
     }
 
 
  
-
 
 
 void Cuenta::hacerString() {
@@ -127,7 +133,7 @@ inline void Cuenta::setNumc(int numC)
     this->numeroCuenta = numC;
         
 }
-inline double Cuenta::setMonto(double monto)
+inline int Cuenta::setMonto(int monto)
 {
     this->monto = monto;
 }

@@ -16,24 +16,23 @@ using namespace std;
 class Fecha
 {
 public:
-    int getHora(void);
-    void setHora(int newHora);
-    int getFecha(void);
-    void setFecha(int newFecha);
     Fecha();
 
-protected:
 private:
     string hora;
     string fecha;
 };
 
 Fecha::Fecha() {
-    time_t tSac = time(NULL);  // instante actual
-    struct tm* pt1 = localtime(&tSac);
-    hora = to_string(pt1->tm_hour) + ":" + to_string(pt1->tm_min) + ":" + to_string(pt1->tm_sec);
-    fecha = to_string(pt1->tm_mday) + "/" + to_string(pt1->tm_mon) + ":" + to_string(pt1->tm_year + 1900);
+    struct tm pt1;
+    __time64_t tSac = time(NULL);
+    errno_t err;
+    _time64(&tSac);
+    err = _localtime64_s(&pt1, &tSac);
+    hora = to_string(pt1.tm_hour) + ":" + to_string(pt1.tm_min) + ":" + to_string(pt1.tm_sec);
+    fecha = to_string(pt1.tm_mday) + "/" + to_string(pt1.tm_mon + 1) + "/" + to_string(pt1.tm_year + 1900);
 }
+
 
 
 #endif

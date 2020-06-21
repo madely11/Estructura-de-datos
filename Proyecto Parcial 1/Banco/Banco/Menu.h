@@ -269,7 +269,7 @@ void Menu::submenu2()
 				case 0:
 					if (true) {
 						system("cls");
-						FileManager fileM("cuenta.txt");
+					
 						Cuenta cuenta;
 						if (!cuenta.verificarCuenta(1)) {
 							menuTeclas();

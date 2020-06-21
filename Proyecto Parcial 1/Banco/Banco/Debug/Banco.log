@@ -1,11 +1,10 @@
 ﻿  Banco.cpp
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(130,12): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(134,12): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(90,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(96,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(104,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(108,21): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(112,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(150,19): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(84): warning C4715: 'Cuenta::verificarCuenta': not all control paths return a value
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(160,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(164,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(89,42): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(94,42): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(101,42): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(105,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(108,18): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(83): warning C4715: 'Cuenta::verificarCuenta': not all control paths return a value
   Banco.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Debug\Banco.exe
