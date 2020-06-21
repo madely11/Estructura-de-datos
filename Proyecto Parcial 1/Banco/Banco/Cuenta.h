@@ -8,8 +8,10 @@
 #if !defined(__Banco_Cuenta_h)
 #define __Banco_Cuenta_h
 
+#include <string>
 #include "TipoCuenta.h"
 #include "FileManager.h"
+#include "Transacciones.h"
 
 class Cuenta
 {
@@ -18,21 +20,22 @@ public:
     double getMonto(void);
     void setNumc(int numC);
     double setMonto(double monto);
-    void crearCuenta(void);
-    void cerrarCuenta(void);
-    void depositar(void);
-    void transferir(int numCuenta, double monto);
+    bool verificarCuenta(int);
+    void retirar(string);
+    //void cerrarCuenta(void);
+    void depositar(string);
     void hacerString();
+    void guardarDatos(string);
+    Cuenta();
     Cuenta(int, string);
     TipoCuenta* tipo;
+    Transacciones t;
 protected:
 private:
-    double monto;
+    float monto;
     int numeroCuenta;
     string idCliente;
-    string dato;
-    //Transacciones transaccion;
-    
+    string dato;   
 };
 
 
@@ -45,6 +48,68 @@ Cuenta::Cuenta(int num, string id) {
     hacerString();
    fileM.agregarLinea(dato);
 }
+
+
+Cuenta::Cuenta(){
+
+}
+
+
+
+bool Cuenta :: verificarCuenta(int num) {
+    int id;
+    string mensaje;
+    cout << "Ingrese el numero de cuenta: " << endl;
+    cin >> id;
+    FileManager fileM("cuenta.txt");
+    mensaje = fileM.buscarCuenta(id);
+    if (mensaje._Equal("salir")) {
+        cout << "Cuenta no existente" << endl;
+        Sleep(1000);
+        return false;
+    }
+    guardarDatos(mensaje);
+        if(num == 1)
+            monto = t.depositar(mensaje, monto);
+        if (num == 2)
+            monto = t.retirar(mensaje, monto);
+}
+
+void Cuenta :: guardarDatos(string mensaje) { 
+        int i = 0;
+        string aux_string;
+        idCliente = "";
+        while (mensaje.at(i) != ',' && i < mensaje.length()) {
+            idCliente += mensaje.at(i);
+            i++;
+        }
+        i++;
+        while (mensaje.at(i) != ',' && i < mensaje.length()) {
+            aux_string += mensaje.at(i);
+            i++;
+        }
+        numeroCuenta = atoi(aux_string.c_str());
+        i++;
+        aux_string = "";
+        while (mensaje.at(i) != ',' && i < mensaje.length()) {
+            aux_string += mensaje.at(i);
+            i++;
+        }
+        monto = atof(aux_string.c_str());
+        i++;
+        aux_string = "";
+        while (i < mensaje.length() && mensaje.at(i) != ',') {
+            aux_string += mensaje.at(i);
+            i++;
+        }
+        i = atoi(aux_string.c_str());
+        //tipo->setId(i);
+    }
+
+
+ 
+
+
 
 void Cuenta::hacerString() {
     dato =idCliente + "," + to_string(numeroCuenta)+ "," + to_string(monto) + "," + to_string(tipo->getId());
@@ -66,4 +131,5 @@ inline double Cuenta::setMonto(double monto)
 {
     this->monto = monto;
 }
+
 #endif

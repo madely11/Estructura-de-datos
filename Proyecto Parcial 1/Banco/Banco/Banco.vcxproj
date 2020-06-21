@@ -157,6 +157,7 @@
     <ClInclude Include="Menu.h" />
     <ClInclude Include="TipoCuenta.h" />
     <ClInclude Include="Transacciones.h" />
+    <ClInclude Include="Validacion.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

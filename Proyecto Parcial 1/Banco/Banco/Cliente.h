@@ -10,6 +10,7 @@
 
 #include <string.h>
 #include "Cuenta.h"
+#include "Validacion.h"
 //#include "FileManager.h"
 #include <iostream>
 
@@ -32,6 +33,7 @@ private:
     std::string cedula;
     std::string email;
     std::string direccion;
+    Validacion validar;
     Cuenta *cuenta=NULL;
     string dato;
 };
@@ -41,11 +43,14 @@ void Cliente :: pedirDatos(int num) {
     getline(cin,nombre);
     cout << "Ingrese la cedula del titular: " << endl;
     getline(cin, cedula);
+    while (!validar.cedula(cedula)) {
+        cout << "Ingrese la cedula del titular: " << endl;
+        getline(cin, cedula);
+    }
     cout << "Ingrese el e-mail del titular: " << endl;
     getline(cin, email);
     cout << "Ingrese la direccion del titular: " << endl;
     getline(cin, direccion);
-
     cuenta = new Cuenta(num, cedula);
     hacerString();
     FileManager fileM ("cliente.txt");

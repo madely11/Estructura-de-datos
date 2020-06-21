@@ -8,27 +8,32 @@
 #if !defined(__Banco_Fecha_h)
 #define __Banco_Fecha_h
 
-class Transacciones;
+#include <iostream>
+#include <string.h>
+using namespace std;
+#include <ctime>
 
 class Fecha
 {
 public:
-    int getDia(void);
-    void setDia(int newDia);
-    int getMes(void);
-    void setMes(int newMes);
-    int getAnio(void);
-    void setAnio(int newAnio);
-
-    Transacciones** transacciones;
+    int getHora(void);
+    void setHora(int newHora);
+    int getFecha(void);
+    void setFecha(int newFecha);
+    Fecha();
 
 protected:
 private:
-    int dia;
-    int mes;
-    int anio;
-
-
+    string hora;
+    string fecha;
 };
+
+Fecha::Fecha() {
+    time_t tSac = time(NULL);  // instante actual
+    struct tm* pt1 = localtime(&tSac);
+    hora = to_string(pt1->tm_hour) + ":" + to_string(pt1->tm_min) + ":" + to_string(pt1->tm_sec);
+    fecha = to_string(pt1->tm_mday) + "/" + to_string(pt1->tm_mon) + ":" + to_string(pt1->tm_year + 1900);
+}
+
 
 #endif

@@ -60,7 +60,7 @@ inline int TipoCuenta::getId(void)
 
 inline void TipoCuenta::setId(int newId)
 {
-    this->id = newId;
+    id = newId;
 }
 
 #endif

@@ -4,10 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <windows.h>
-#include <fstream>
 #include <math.h>
-#include "TipoCuenta.h"
+#include "Cuenta.h"
 #include "Cliente.h"
+#include "FileManager.h"
+
 using namespace std;
 
 class Menu {
@@ -174,6 +175,7 @@ void Menu::submenu1()
 						cliente.pedirDatos(1);
 						cout << endl << "<<<<<<<<<Cuenta creada exitosamente>>>>>>>>>" << endl;
 						cout << cliente.stringConsola();
+						cout << endl;
 						//Sleep(1000);
 						system("pause");
 						menuTeclas();
@@ -182,8 +184,17 @@ void Menu::submenu1()
 					}
 					break;
 				case 1:
-					if(true)
-						//TipoCuenta tipo2(2);
+					if(true) {
+						system("cls");
+						Cliente cliente;
+						cliente.pedirDatos(2);
+						cout << endl << "<<<<<<<<<Cuenta creada exitosamente>>>>>>>>>" << endl;
+						cout << cliente.stringConsola();
+						cout << endl;
+						//Sleep(1000);
+						system("pause");
+						menuTeclas();
+					}
 					break;
 				case 2:
 					system("cls");
@@ -256,8 +267,32 @@ void Menu::submenu2()
 				switch (cursor)
 				{
 				case 0:
+					if (true) {
+						system("cls");
+						FileManager fileM("cuenta.txt");
+						Cuenta cuenta;
+						if (!cuenta.verificarCuenta(1)) {
+							menuTeclas();
+						}
+						Sleep(1000);
+						menuTeclas();
+
+						//TipoCuenta tipo1(1);
+					}
 					break;
 				case 1:
+					if (true) {
+						system("cls");
+						FileManager fileM("cuenta.txt");
+						Cuenta cuenta;
+						if (!cuenta.verificarCuenta(2)) {
+							menuTeclas();
+						}
+						Sleep(1000);
+						menuTeclas();
+
+						//TipoCuenta tipo1(1);
+					}
 					break;
 				case 2:
 					system("cls");

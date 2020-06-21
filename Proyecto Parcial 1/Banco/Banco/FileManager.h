@@ -2,7 +2,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include "FileManager.h"
 using namespace std;
 
 
@@ -22,7 +21,7 @@ public:
 	void cerrarLectura();
 	void cerrarEscritura();
 	int contarLineas(string);
-
+	string buscarCuenta(int);
 };
 
 
@@ -67,6 +66,7 @@ void FileManager::agregarLinea(string linea)
 	cerrarEscritura();
 }
 
+
 string FileManager::leer(int linea)
 {
 	crearLectura();
@@ -82,6 +82,7 @@ string FileManager::leer(int linea)
 	cerrarLectura();
 	return texto;
 }
+
 
 void FileManager::cerrarLectura()
 {
@@ -111,3 +112,35 @@ inline int FileManager::contarLineas(string file)
 	cerrarLectura();
 	return cuentaLinea;
 }
+
+string FileManager::buscarCuenta(int _id)
+{
+	crearLectura();
+	int id = 0;
+	int i = 0;
+	string texto;
+	string texto2 = "salir";
+	string id_string;
+	while (!archivoLectura.eof())
+	{
+		i = 0;
+		id_string = " ";
+		getline(archivoLectura, texto);
+
+		while (i < texto.length() && texto.at(i) != ',') {
+			i++;
+		}
+		i++;
+		while (i < texto.length() && texto.at(i) != ',') {
+			id_string += texto.at(i);
+			id = atoi(id_string.c_str());
+			i++;
+		}
+		if (id == _id) {
+			return texto;
+		}
+	}
+	cerrarLectura();
+	return texto2;
+}
+
