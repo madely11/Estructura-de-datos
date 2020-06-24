@@ -21,8 +21,8 @@ class Cliente
 public:
     string getNombre();
     string getId(void);
-    void setNombre(std::string nombre);
-    void setId(std::string id);
+    void setNombre(string);
+    void setId(string);
     void pedirDatos(int);
     void hacerString();
     string stringConsola();

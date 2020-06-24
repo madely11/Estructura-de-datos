@@ -1,6 +1,13 @@
 ﻿  Banco.cpp
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(160,11): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(164,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(162,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(166,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(209,11): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(100,38): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(105,38): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(111,38): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(117,14): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(123,14): warning C4018: '<': signed/unsigned mismatch
+C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(129,14): warning C4018: '<': signed/unsigned mismatch
 C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(89,42): warning C4018: '<': signed/unsigned mismatch
 C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(94,42): warning C4018: '<': signed/unsigned mismatch
 C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(101,42): warning C4018: '<': signed/unsigned mismatch

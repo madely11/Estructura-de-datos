@@ -18,11 +18,11 @@ using namespace std;
 class TipoCuenta
 {
 public:
-    string getNombre(void);
-    void setNombre(string newNombre);
-    TipoCuenta(int num);
-    int getId(void);
-    void setId(int newId);
+    string getNombre();
+    void setNombre(string);
+    TipoCuenta(int);
+    int getId();
+    void setId(int);
 
 protected:
 
@@ -32,7 +32,7 @@ private:
 };
 
 
-inline string TipoCuenta::getNombre(void)
+inline string TipoCuenta::getNombre()
 {
     return nombre;
 }
@@ -53,7 +53,7 @@ TipoCuenta::TipoCuenta(int num) {
     }
 }
 
-inline int TipoCuenta::getId(void)
+inline int TipoCuenta::getId()
 {
     return id;
 }

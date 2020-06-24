@@ -8,21 +8,23 @@ using namespace std;
 class FileManager
 {
 private:
-	string nombre_archivo;
+	string nombreArchivo;
 	ifstream archivoLectura; //archivo de lectura
 	ofstream archivoEscritura; //archivo de escritura
 
 public:
-	FileManager(string _nombre_archivo);
+	FileManager(string);
 	bool crearLectura();
 	bool crearEscritura();
-	void agregarLinea(string linea);
+	void agregarLinea(string);
 	void cerrarLectura();
 	void cerrarEscritura();
 	int contarLineas();
 	string buscarCuenta(int);
 	void actualizar(int, string);
 	string comparar(int, string);
+	string compararRegistro(int, string);
+	string buscarRegistro(int, int);
 };
 
 
@@ -30,10 +32,10 @@ public:
 bool FileManager::crearEscritura()
 {
 
-	archivoEscritura.open(nombre_archivo, ios::out | ios::app);
+	archivoEscritura.open(nombreArchivo, ios::out | ios::app);
 
 	if (archivoEscritura.fail()) {
-		cout << "Imposible abrir el archivo: " << nombre_archivo << endl;
+		cout << "Imposible abrir el archivo: " << nombreArchivo << endl;
 		return false;
 	}
 	else {
@@ -41,20 +43,20 @@ bool FileManager::crearEscritura()
 	}
 }
 
-FileManager::FileManager(string _nombre_archivo)
+FileManager::FileManager(string archivo)
 {
 	
-	nombre_archivo = _nombre_archivo;
+	nombreArchivo = archivo;
 	crearEscritura();
 	cerrarEscritura();
 }
 
 bool FileManager::crearLectura()
 {
-	archivoLectura.open(nombre_archivo, ios::in);
+	archivoLectura.open(nombreArchivo, ios::in);
 
 	if (archivoLectura.fail()) {
-		cout << "Imposible abrir el archivo: " << nombre_archivo << endl;
+		cout << "Imposible abrir el archivo: " << nombreArchivo << endl;
 		return false;
 	}
 	else {
@@ -99,7 +101,7 @@ inline int FileManager::contarLineas()
 	return cuentaLinea;
 }
 
-string FileManager::buscarCuenta(int _id)
+string FileManager::buscarCuenta(int numCuenta)
 {
 	crearLectura();
 	string texto;
@@ -108,7 +110,7 @@ string FileManager::buscarCuenta(int _id)
 	while (!archivoLectura.eof())
 	{
 		getline(archivoLectura, texto);
-		texto = comparar(_id, texto);
+		texto = comparar(numCuenta, texto);
 		if (!texto._Equal("salir")) {
 			cerrarLectura();
 			return texto;
@@ -118,7 +120,7 @@ string FileManager::buscarCuenta(int _id)
 	return texto2;
 }
 
-inline void FileManager::actualizar(int _id, string dato_nuevo)
+inline void FileManager::actualizar(int numCuenta, string datoNuevo)
 {
 	ofstream archivoAux;
 	string dato;
@@ -136,11 +138,11 @@ inline void FileManager::actualizar(int _id, string dato_nuevo)
 	while (!archivoLectura.eof()) {
 
 		getline(archivoLectura, dato);
-		if (comparar(_id, dato)._Equal("salir")) {
+		if (comparar(numCuenta, dato)._Equal("salir")) {
 			archivoAux << dato << endl;
 		}
 		else {
-			archivoAux << dato_nuevo << endl;
+			archivoAux << datoNuevo << endl;
 		}
 	}
 	archivoAux.close();
@@ -150,7 +152,7 @@ inline void FileManager::actualizar(int _id, string dato_nuevo)
 
 }
 
-inline string FileManager::comparar(int _id, string dato)
+inline string FileManager::comparar(int numCuenta, string dato)
 {
 	int i = 0;
 	int id = 0;
@@ -166,9 +168,53 @@ inline string FileManager::comparar(int _id, string dato)
 		i++;
 	}
 	id = atoi(id_string.c_str());
-	if (id == _id) {
+	if (id == numCuenta) {
 		return dato;
 	}
 	return texto2;
 }
+
+inline string FileManager::buscarRegistro(int numCuenta, int coincidencia)
+{
+	crearLectura();
+	string texto;
+	string texto2 = "salir";
+	string idString;
+	int i = 0;
+	while (!archivoLectura.eof())
+	{
+		getline(archivoLectura, texto);
+		texto = compararRegistro(numCuenta, texto);
+
+		if (!texto._Equal("salir")) {
+			i++;
+		}
+		if (!texto._Equal("salir") && i == coincidencia) {
+			//i++;
+			cerrarLectura();
+			return texto;
+		}
+	}
+	cerrarLectura();
+	return texto2;
+}
+
+inline string FileManager::compararRegistro(int numCuenta, string dato)
+{
+	int i = 0;
+	int id = 0;
+	string texto2 = "salir";
+	string idString;
+	idString = "";
+	while (i < dato.length() && dato.at(i) != ',') {
+		idString += dato.at(i);
+		i++;
+	}
+	id = atoi(idString.c_str());
+	if (id == numCuenta) {
+		return dato;
+	}
+	return texto2;
+}
+
 

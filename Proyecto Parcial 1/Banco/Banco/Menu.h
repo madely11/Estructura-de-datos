@@ -17,12 +17,8 @@ public:
 	void ocultarCursor();
 	void submenu1();
 	void submenu2();
-	int suma(int a, int b);
 };
 
-int Menu::suma(int a, int b) {
-	return a + b;
-}
 
 void Menu::ocultarCursor()
 {
@@ -97,7 +93,11 @@ void Menu::menuTeclas()
 					submenu2();
 					break;
 				case 2:
-					menuTeclas();
+					if (true) {
+						Transacciones t;
+						t.datosTransaccion();
+						menuTeclas();
+					}
 					break;
 				case 3:
 					system("cls");

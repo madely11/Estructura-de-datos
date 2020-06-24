@@ -18,8 +18,8 @@ class Cuenta
 public:
     int getNumc(void);
     double getMonto(void);
-    void setNumc(int numC);
-    int setMonto(int monto);
+    void setNumc(int);
+    int setMonto(int);
     bool verificarCuenta(int);
     
     void hacerString();
@@ -47,12 +47,12 @@ Cuenta::Cuenta(int num, string id) {
    fileM.agregarLinea(dato);
 }
 
-
 Cuenta::Cuenta(){
-
+    monto = 0;
+    numeroCuenta = 0;
+    idCliente = "";
+    dato = "";
 }
-
-
 
 bool Cuenta :: verificarCuenta(int num) {
     int id;
@@ -71,12 +71,12 @@ bool Cuenta :: verificarCuenta(int num) {
     guardarDatos(mensaje);
 
     if (num == 1) {
-        monto = t.depositar(monto);
+        monto = t.depositar(monto, id);
         hacerString();
         fileM.actualizar(id, dato);
      }
     if (num == 2) {
-        monto = t.retirar(monto);
+        monto = t.retirar(monto, id);
         hacerString();
         fileM.actualizar(id, dato);
      }
@@ -84,7 +84,7 @@ bool Cuenta :: verificarCuenta(int num) {
 
 void Cuenta :: guardarDatos(string mensaje) { 
         int i = 0;
-        string aux_string;
+        string auxString;
         idCliente = "";
         while (mensaje.at(i) != ',' && i < mensaje.length()) {
             idCliente += mensaje.at(i);
@@ -92,34 +92,31 @@ void Cuenta :: guardarDatos(string mensaje) {
         }
         i++;
         while (mensaje.at(i) != ',' && i < mensaje.length()) {
-            aux_string += mensaje.at(i);
+            auxString += mensaje.at(i);
             i++;
         }
-        numeroCuenta = atoi(aux_string.c_str());
+        numeroCuenta = atoi(auxString.c_str());
         i++;
-        aux_string = "";
+        auxString = "";
         while (mensaje.at(i) != ',' && i < mensaje.length()) {
-            aux_string += mensaje.at(i);
+            auxString += mensaje.at(i);
             i++;
         }
-        monto = atof(aux_string.c_str());
+        monto = atof(auxString.c_str());
         i++;
-        aux_string = "";
+        auxString = "";
         while (i < mensaje.length() && mensaje.at(i) != ',') {
-            aux_string += mensaje.at(i);
+            auxString += mensaje.at(i);
             i++;
         }
-        i = atoi(aux_string.c_str());
+        i = atoi(auxString.c_str());
         tipo = new TipoCuenta(i);
     }
-
-
- 
-
 
 void Cuenta::hacerString() {
     dato =idCliente + "," + to_string(numeroCuenta)+ "," + to_string(monto) + "," + to_string(tipo->getId());
 }
+
 int Cuenta::getNumc(void)
 {
     return numeroCuenta;

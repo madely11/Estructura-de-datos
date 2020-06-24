@@ -16,23 +16,36 @@ using namespace std;
 class Fecha
 {
 public:
-    Fecha();
+    string getFecha();
+    string getHora();
 
 private:
     string hora;
     string fecha;
 };
 
-Fecha::Fecha() {
+
+inline string Fecha::getFecha()
+{
+    struct tm pt1;
+    __time64_t tSac = time(NULL);
+    errno_t err;
+    _time64(&tSac);
+    err = _localtime64_s(&pt1, &tSac);
+    fecha = to_string(pt1.tm_mday) + "/" + to_string(pt1.tm_mon + 1) + "/" + to_string(pt1.tm_year + 1900);
+    return fecha;
+}
+
+inline string Fecha::getHora()
+{
     struct tm pt1;
     __time64_t tSac = time(NULL);
     errno_t err;
     _time64(&tSac);
     err = _localtime64_s(&pt1, &tSac);
     hora = to_string(pt1.tm_hour) + ":" + to_string(pt1.tm_min) + ":" + to_string(pt1.tm_sec);
-    fecha = to_string(pt1.tm_mday) + "/" + to_string(pt1.tm_mon + 1) + "/" + to_string(pt1.tm_year + 1900);
+    return hora;
 }
-
 
 
 #endif
