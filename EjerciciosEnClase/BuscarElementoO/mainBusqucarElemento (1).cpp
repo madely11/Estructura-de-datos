@@ -5,7 +5,7 @@
 #include "Elemento.h"
 
 int main(int argc, char** argv) {
-	Elemento e;
+	Elemento<int> e;
 	e.leer();
 	std::cout<<"Tiempo en encontrar el elemento: "<<e.buscarElemento(5)<<std::endl;
 	return 0;

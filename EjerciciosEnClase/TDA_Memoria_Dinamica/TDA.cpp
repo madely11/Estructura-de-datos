@@ -1,28 +1,34 @@
 #include "CProceso.h"
-CProceso::CProceso(int nume,int deno)
+template<typename T>
+CProceso<T>::CProceso(T nume,T deno)
 {
 	this->num=nume;
 	this->den=deno;
 }
-void CProceso::_setnum(int nume)
+template<typename T>
+void CProceso<T>::_setnum(T nume)
 {
 	num=nume;
 }
-int CProceso::_getnum()
+template<typename T>
+T CProceso<T>::_getnum()
 {
 	return num;
 }
-void CProceso::_setden(int deno)
+template<typename T>
+void CProceso<T>::_setden(T deno)
 {
 	den=deno;
 }
-int CProceso::_getden()
+template<typename T>
+T CProceso<T>::_getden()
 {
 	return den;
 }
-CProceso CProceso::racional(CProceso obj1, CProceso obj2)
+template<typename T>
+CProceso<T> CProceso<T>::racional(CProceso obj1, CProceso obj2)
 {
-	int a,b,c,d;
+	T a,b,c,d;
 	a=obj1._getnum();
 	b=obj1._getden();
 	c=obj2._getnum();
@@ -31,16 +37,17 @@ CProceso CProceso::racional(CProceso obj1, CProceso obj2)
 	this->_setden(b*d);
 	return *this;
 }
-void CProceso::imprimeObj(CProceso Obj)
+template<typename T>
+void CProceso<T>::imprimeObj(CProceso Obj)
 {
 	cout<<Obj._getnum()<<"/"<<Obj._getden()<<endl;
 }
 int main(void)
 {
 	int a=18,b=3;
-	CProceso *obj1 = new CProceso(a,b);
-	CProceso *obj2 = new CProceso(15,5);
-	CProceso *obj3 = new CProceso(0,0);
+	CProceso<int> *obj1 = new CProceso<int>(a,b);
+	CProceso<int> *obj2 = new CProceso<int>(15,5);
+	CProceso<int> *obj3 = new CProceso<int>(0,0);
 	obj3->racional(*obj1,*obj2);
 	obj1->imprimeObj(*obj1);
 	obj2->imprimeObj(*obj2);

@@ -9,34 +9,43 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
+#include <iomanip>
+#include <cstdlib>
+#include "conio.h"
+#include <sstream>
 using namespace std;
-
+template<class T>
 class CuboMagico{
 private:
-  int **cuadrado;
+  T** cuadrado;
 public:
-    CuboMagico(int **);
+    CuboMagico(T**);
+    CuboMagico();
     void llenar(int,int);
     void mostrar(int, int);
-    int **getCuboMagicoCuadrado();
-    void setCuboMagicoCuadrado(int **);
+    T** getCuboMagicoCuadrado();
+    void setCuboMagicoCuadrado(T**);
 
 };
-
-CuboMagico::CuboMagico(int **_cuadrado){
-    cuadrado=_cuadrado;
+template<class T>
+inline CuboMagico<T>::CuboMagico(T **_cuadrado){
+    CuboMagico::cuadrado=_cuadrado;
 }
-
-int **CuboMagico::getCuboMagicoCuadrado(){
+template<class T>
+inline CuboMagico<T>::CuboMagico(){
+    
+}
+template<class T>
+T** CuboMagico<T>::getCuboMagicoCuadrado(){
     return cuadrado;
 }
-
-void CuboMagico::setCuboMagicoCuadrado(int **_cuadrado){
+template<class T>
+void CuboMagico<T>::setCuboMagicoCuadrado(T **_cuadrado){
     cuadrado=_cuadrado;
 }
 
-
-void CuboMagico::llenar(int a,int b){
+template<class T>
+void CuboMagico<T>::llenar(int a,int b){
     int x=0,k=0,p=1,j=0,t=0,s=0,d=0;
         x=(b-1)/2;
         t=((a+1)/2);
@@ -66,8 +75,8 @@ void CuboMagico::llenar(int a,int b){
         x++;
     }
 }
-
-void CuboMagico::mostrar(int a,int b){
+template<class T>
+void CuboMagico<T>::mostrar(int a,int b){
    system("cls");
     int x=0,t=0,s=0;
         t=((a+1)/2);

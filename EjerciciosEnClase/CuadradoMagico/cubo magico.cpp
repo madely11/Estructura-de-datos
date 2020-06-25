@@ -19,9 +19,10 @@ using namespace std;
 int main()
 {
 	
-    int **cuadrado;
+    int **_cuadrado;
     Ingreso ingreso;
     int num;
+   
     string dim;
     do{
     	dim=ingreso.leer("Digite el tamanio del arreglo, solo numeros impares: ",2);
@@ -29,14 +30,14 @@ int main()
     }while(num%2==0||num<0);
     num=2*num-1;
 
-    cuadrado=(int**)calloc(num,sizeof(int*));
+    _cuadrado=(int**)calloc(num,sizeof(int*));
     for(int i=0;i<num;i++){
-        *(cuadrado+i)=(int*)calloc(num,sizeof(int));
+        *(_cuadrado+i)=(int*)calloc(num,sizeof(int));
     }
-
-    CuboMagico cubo=CuboMagico(cuadrado);
-    cubo.llenar(num,num);
-    cubo.mostrar(num,num);
+    CuboMagico<int>* cubo= new CuboMagico<int>(_cuadrado);
+    
+    cubo->llenar(num,num);
+    cubo->mostrar(num,num);
     
     system("pause");
     return 0;

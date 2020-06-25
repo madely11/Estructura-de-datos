@@ -6,7 +6,7 @@ int main(int argc, char** argv) {
 	int *ptr;
 	ptr=(int*)malloc(dim*sizeof(int));
 	//ptr=new int [dim];
-	Vector vector =Vector();
+	Vector<int> vector =Vector<int>();
 	vector.ingresarV(ptr,dim);
 	vector.imprimirV(ptr,dim);
 	vector.procesar(vector,dim);

@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	//int v[10];
 	//int *v=new int[10];
-	Arreglo v;
+	Arreglo<int> v;
 	v.encerar();
 	//v.impresion();
 	

@@ -8,7 +8,7 @@
 
 int main(int argc, char *argv[])
 {
-	Arreglo a;
+	Arreglo<int> a;
 	a.encerar();
 	a.imprimir();
 	system("pause");

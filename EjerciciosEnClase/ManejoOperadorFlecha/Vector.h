@@ -3,31 +3,35 @@
 #include <stdlib.h>
 #include <iostream>
 using namespace std;
+template<typename T>class Arreglo;
+template<typename T> ostream &operator<< (ostream& salida, Arreglo<T>& z);
+template<class T>
 class Vector
 {
 
 	private:
-	int *vector;
+	T *vector;
 	public:
-		int* getVector();
+		T* getVector();
 		Vector();
-		void ingresarV(int *, int);
-		void imprimirV( int  *, int );
+		void ingresarV(T *, int);
+		void imprimirV( T  *, int );
 		void procesar(Vector , int);
-		Vector(int *ptr);
+		Vector(T *ptr);
 };
-
-int* Vector::getVector(){
+template<typename T>
+T* Vector<T>::getVector(){
 	return vector;
 }
-
-void Vector::procesar(Vector vec, int dim){
+template<typename T>
+void Vector<T>::procesar(Vector vec, int dim){
 	for(int i=0; i<dim; i++)
 	{
 		*(vector+i)= *(vec.vector+i) *5;
 	}
 }
-void Vector::ingresarV(int *vector, int dim)
+template<typename T>
+void Vector<T>::ingresarV(T *vector, int dim)
 {
 	for(int i=0; i<dim; i++)
 	{
@@ -37,7 +41,8 @@ void Vector::ingresarV(int *vector, int dim)
 	}
 	this->vector=vector;
 }
-void Vector::imprimirV(  int *vector, int dim)
+template<typename T>
+void Vector<T>::imprimirV(  T *vector, int dim)
 {
 	printf("\nDATOS GUARDADOS:\n");
 	for(int i=0; i<dim; i++)
@@ -46,7 +51,8 @@ void Vector::imprimirV(  int *vector, int dim)
 		printf("%d,",*(vector+i));
 	}
 }
-Vector::Vector(){
+template<typename T>
+Vector<T>::Vector(){
 
 	
 }

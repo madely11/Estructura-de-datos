@@ -4,23 +4,26 @@
 #include <stdlib.h>
 #define TAM 10
 using namespace std;
+template<typename T>class Elemento;
+template<typename T> ostream &operator<< (ostream& salida, Elemento<T>& z);
+template<class T>
 class Elemento{
 	public:
-	int A[TAM];
+	T A[TAM];
 	int i;
 	public:
 	void leer();
-	float buscarElemento(int);
+	float buscarElemento(T);
 };
-
-void Elemento::leer(){
+template<typename T>
+void Elemento<T> ::leer(){
 	for(i=0;i< TAM;i++){
 		std::cout<<"Ingrese el valor "<<i+1<<std::endl;
 		std::cin>>A[i];
 	}
 }
-
-float Elemento ::buscarElemento(int x){
+template<typename T>
+float Elemento<T> ::buscarElemento(T x){
 	int i, p=0,sw=0;
 	float n;
 	n=(float)TAM;

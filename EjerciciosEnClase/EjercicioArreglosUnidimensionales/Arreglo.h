@@ -7,9 +7,12 @@
 #define E 5
 typedef int entero;
 using namespace std;
+template<typename T>class Arreglo;
+template<typename T> ostream &operator<< (ostream& salida, Arreglo<T>& z);
+template<class T>
 class Arreglo{
 	public: 
-	int v[10];
+	T v[10];
 	public:
 	void encerar();
 	void ingresar();
@@ -18,23 +21,27 @@ class Arreglo{
 };
 
 //desarrollo de la funsión encerar
-void Arreglo :: ingresar(){
+template<typename T>
+void Arreglo<T> :: ingresar(){
 	entero val;
 	for(entero i=0;i<10;i++){
 		cout<<"Valor "<<i+1<<endl;
 		cin>>v[i];
 	}
 }
-void Arreglo :: encerar(){
+template<typename T>
+void Arreglo<T> :: encerar(){
 	for(entero i=0;i<10;v[i]=0,i++);
 }
-void Arreglo :: procesar(){
+template<typename T>
+void Arreglo<T> :: procesar(){
 	for(entero i=0;i<10;i++){
   		v[i]*=E;
 		//v[i]=v[i]*E;
 	}
 }
-void Arreglo :: imprimir(){
+template<typename T>
+void Arreglo<T>:: imprimir(){
 	for(entero i=0;i<10;i++)
 	cout<<v[i]<<", ";
 }

@@ -6,7 +6,7 @@ int main()
 {
 	int d;
 	int **mat1, **mat2, **matr;
-	Matriz matriz;
+	Matriz<int> matriz;
 	printf("\nIngrese la dimension de la matriz: ");
 	scanf("%d",&d);
 	

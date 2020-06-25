@@ -1,21 +1,28 @@
 #include "stdio.h"
 #include "stdlib.h"
 #include "conio.h"
+#include <cstdlib>
+#include <iostream>
 
+using namespace std;
+template<typename T>class Matriz;
+template<typename T> ostream &operator<< (ostream& salida, Matriz<T>& z);
+template<class T>
 class Matriz{
 public:
-void ingreso(int **mat, int t);
-void imprime(int **mat, int t);
-void proceso(int **mat1, int **mat2,int **matr, int t);	
-void encerar(int ** m,int d);
+void ingreso(T **mat, int t);
+void imprime(T **mat, int t);
+void proceso(T **mat1, T **mat2,T **matr, int t);	
+void encerar(T ** m,int d);
 
-int **nmatriz(int d);
+T **nmatriz(int d);
 };
 
 
 
 //FUNCION PARA INGRESAR LOS DATOS DE LA MATRIZ
-void Matriz::ingreso(int **mat, int t)
+template<typename T>
+void Matriz<T>::ingreso(T **mat, int t)
 {
 	for(int i=0;i<t;i++)
 		for(int j=0;j<t;j++)
@@ -23,7 +30,8 @@ void Matriz::ingreso(int **mat, int t)
 }
 
 //FUNCION PARA CALCULAR MULTIPLICACION DE MATRICES
-void Matriz::proceso(int **mat1, int **mat2,int **matr, int t)
+template<typename T>
+void Matriz<T>::proceso(T **mat1, T **mat2,T **matr, int t)
 {
 	for(int i=0;i<t;i++){
 		for(int j=0;j<t;j++){
@@ -36,7 +44,8 @@ void Matriz::proceso(int **mat1, int **mat2,int **matr, int t)
 }
 
 //FUNCION IMPRESION DATOS DE LA MATRIZ
-void Matriz::imprime(int **mat, int t)
+template<typename T>
+void Matriz<T>::imprime(T **mat, int t)
 {
 	for(int i=0;i<t;i++){
 		for(int j=0;j<t;j++)
@@ -47,8 +56,8 @@ void Matriz::imprime(int **mat, int t)
 	printf("\n");
 	}
 }
-
-int** Matriz::nmatriz(int d)
+template<typename T>
+T** Matriz<T>::nmatriz(int d)
 {
     int **m , j;
     m =(int **)malloc(d*sizeof(int *));
@@ -56,8 +65,8 @@ int** Matriz::nmatriz(int d)
         *(m+j)=(int *)malloc(d*sizeof(int));
     return m;
 }
-
-void Matriz::encerar(int ** m,int d)
+template<typename T>
+void Matriz<T>::encerar(T ** m,int d)
 {
     int i, j;
     for(i=0;i<d;i++)

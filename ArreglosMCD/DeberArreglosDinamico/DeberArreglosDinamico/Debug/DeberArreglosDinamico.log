@@ -1,1 +1,4 @@
-﻿  DeberArreglosDinamico.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\ArreglosMCD\DeberArreglosDinamico\Debug\DeberArreglosDinamico.exe
+﻿  Aplicativo.cpp
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ArreglosMCD\DeberArreglosDinamico\DeberArreglosDinamico\Validacion.h(36,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ArreglosMCD\DeberArreglosDinamico\DeberArreglosDinamico\Validacion.h(51,13): warning C4101: 'e': variable local sin referencia
+  DeberArreglosDinamico.vcxproj -> C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\ArreglosMCD\DeberArreglosDinamico\Debug\DeberArreglosDinamico.exe
