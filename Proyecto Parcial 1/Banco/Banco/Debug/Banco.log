@@ -13,9 +13,9 @@ C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-
 C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(101,42): warning C4018: '<': no coinciden signed/unsigned
 C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(105,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
 C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(108,18): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(69,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(84,13): warning C4101: 'e': variable local sin referencia
-C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(94,21): warning C4018: '<': no coinciden signed/unsigned
-C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(109,13): warning C4101: 'e': variable local sin referencia
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(70,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(85,13): warning C4101: 'e': variable local sin referencia
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(95,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(110,13): warning C4101: 'e': variable local sin referencia
 C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(83): warning C4715: 'Cuenta::verificarCuenta': no todas las rutas de acceso de control devuelven un valor
   Banco.vcxproj -> C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Debug\Banco.exe

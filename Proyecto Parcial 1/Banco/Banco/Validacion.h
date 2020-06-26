@@ -1,6 +1,7 @@
 #include<string.h>
 #include <iostream>
 #include <ctype.h>
+
 #pragma once
 using namespace std;
 
@@ -98,7 +99,7 @@ bool Validacion::validarString(string entrada, int tipo) {
 			if (!isalpha(entrada[i]) && tipo == 1) {
 				throw 1;
 			}
-			if (entrada[i]==' ') {
+			if (entrada[i]=='.') {
 				throw 1;
 			}
 			if (isalpha(entrada[i]) == 0) {

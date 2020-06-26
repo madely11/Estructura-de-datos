@@ -39,11 +39,11 @@ string Ingreso::leerString(string mensage, int tipo) {
 	Validacion validacion;
 	string entrada;
 	cout << mensage << endl;
-	cin >> entrada;
+	getline(cin, entrada);
 	while (validacion.validarString(entrada, tipo)) {
 		
 		cout << "Ingrese solo letras reingrese:" << endl;
-		cin >> entrada;
+		getline(cin,entrada);
 		cin.sync();
 		cin.clear();
 	}
