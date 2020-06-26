@@ -13,7 +13,7 @@
 #include "Validacion.h"
 //#include "FileManager.h"
 #include <iostream>
-
+#include"Ingreso.h"
 using namespace std;
 
 class Cliente
@@ -36,21 +36,19 @@ private:
     Validacion validar;
     Cuenta *cuenta=NULL;
     string dato;
+    Ingreso ingreso;
 };
 
 void Cliente :: pedirDatos(int num) {
-    cout << "Ingrese el nombre del titular: " << endl;
-    getline(cin,nombre);
-    cout << "Ingrese la cedula del titular: " << endl;
-    getline(cin, cedula);
+    string dim;
+    nombre = ingreso.leerString("Ingrese el nombre del titular : ", 1);
+    cedula=cedula.assign(ingreso.ingresaNumericos("Ingrese la cedula del titular:"),10);
     while (!validar.cedula(cedula)) {
-        cout << "Ingrese la cedula del titular: " << endl;
-        getline(cin, cedula);
+        cedula.assign(ingreso.ingresaNumericos("\nIngrese la cedula del titular:"),10);
     }
-    cout << "Ingrese el e-mail del titular: " << endl;
-    getline(cin, email);
-    cout << "Ingrese la direccion del titular: " << endl;
-    getline(cin, direccion);
+    
+    email = ingreso.leerString("\nIngrese el email del titular : ", 1);
+    direccion = ingreso.leerString("Ingrese la direccion del titular : ", 1);
     cuenta = new Cuenta(num, cedula);
     hacerString();
     FileManager fileM ("cliente.txt");

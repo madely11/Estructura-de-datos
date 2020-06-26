@@ -1,11 +1,14 @@
 #include<string.h>
 #include <iostream>
-
+#include <ctype.h>
+#pragma once
 using namespace std;
 
 class Validacion {
 public:
 	bool cedula(string);
+	bool validar(string, int);
+	bool validarString(string, int);
 };
 
 bool Validacion :: cedula(string cedula) {
@@ -59,3 +62,52 @@ bool Validacion :: cedula(string cedula) {
 
 		return true;
 	}
+
+bool Validacion::validar(string entrada, int tipo) {
+	int contador = 0;
+	try {
+		for (int i = 0; i < entrada.length(); i++) {
+			if (isalpha(entrada[i])) {
+				throw 1;
+			}
+			if (!isdigit(entrada[i]) && tipo == 1) {
+				throw 1;
+			}
+			if (entrada[i] == '.') {
+				contador++;
+			}
+			if ((isdigit(entrada[i]) == 0 && entrada[i] != '.') || (contador > 1)) {
+				throw 1;
+			}
+		}
+	}
+	catch (int e) {
+		return true;
+	}
+	return false;
+}
+
+
+bool Validacion::validarString(string entrada, int tipo) {
+	int contador = 0;
+	try {
+		for (int i = 0; i < entrada.length(); i++) {
+			if (isdigit(entrada[i])) {
+				throw 1;
+			}
+			if (!isalpha(entrada[i]) && tipo == 1) {
+				throw 1;
+			}
+			if (entrada[i]==' ') {
+				throw 1;
+			}
+			if (isalpha(entrada[i]) == 0) {
+				throw 1;
+			}
+		}
+	}
+	catch (int e) {
+		return true;
+	}
+	return false;
+}

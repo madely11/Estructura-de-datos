@@ -1,17 +1,21 @@
 ﻿  Banco.cpp
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(162,11): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(166,11): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(209,11): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(100,38): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(105,38): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(111,38): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(117,14): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(123,14): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(129,14): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(89,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(94,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(101,42): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(105,21): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(108,18): warning C4018: '<': signed/unsigned mismatch
-C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(83): warning C4715: 'Cuenta::verificarCuenta': not all control paths return a value
-  Banco.vcxproj -> C:\Users\madel\Documents\III Semestre\Estructura de datos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Debug\Banco.exe
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(162,11): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(166,11): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\FileManager.h(209,11): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(100,38): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(105,38): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(111,38): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(117,14): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(123,14): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Transacciones.h(129,14): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(89,42): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(94,42): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(101,42): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(105,21): warning C4244: '=': conversión de 'double' a 'int'; posible pérdida de datos
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(108,18): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(69,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(84,13): warning C4101: 'e': variable local sin referencia
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(94,21): warning C4018: '<': no coinciden signed/unsigned
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Validacion.h(109,13): warning C4101: 'e': variable local sin referencia
+C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Banco\Cuenta.h(83): warning C4715: 'Cuenta::verificarCuenta': no todas las rutas de acceso de control devuelven un valor
+  Banco.vcxproj -> C:\Users\Kevin Caicedo\Desktop\Estructura de Datos\EstructuraDeDatos\Estrcutura-de-datos\Proyecto Parcial 1\Banco\Debug\Banco.exe
